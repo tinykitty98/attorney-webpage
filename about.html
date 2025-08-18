@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About James Maus | Attorney at Law | Cincinnati, OH</title>
+  <meta name="description" content="Learn about James Maus, experienced attorney and former U.S. Army JAG officer. Proven track record in criminal defense, family law, personal injury, and appellate advocacy." />
+  <style>
+    :root {
+      --ink: #0e1b2a;
+      --ink-2: #203549;
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --accent: #c6a164;
+      --accent-2: #345d7e;
+      --muted: #6b7a90;
+      --ring: rgba(12, 18, 26, 0.08);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(14, 27, 42, 0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+
+    .container { width: min(1100px, 92%); margin-inline: auto; }
+    .grid { display: grid; gap: 1.25rem; }
+
+    .topbar { background: var(--ink); color: #fff; font-size: 0.95rem; }
+    .topbar .container { padding: 0.4rem 0; display: flex; justify-content: space-between; align-items: center; }
+    .topbar a { color: #fff; text-decoration: none; }
+    .topbar .contact-buttons { display: flex; gap: 0.75rem; align-items: center; }
+
+    header { background: #fff; position: sticky; top: 0; z-index: 20; box-shadow: 0 2px 10px var(--ring); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; }
+    .brand { display: flex; gap: 0.75rem; align-items: center; font-weight: 700; letter-spacing: 0.3px; }
+    nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+    nav a { text-decoration: none; color: var(--ink); font-weight: 600; transition: color 0.2s; }
+    nav a:hover { color: var(--accent-2); }
+    .cta { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent-2); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(52,93,126,0.25); margin-right: 0.5rem; }
+    .cta-text { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(198,161,100,0.25); }
+
+    .page-hero { background: var(--ink); color: #fff; text-align: center; }
+    .page-hero .container { padding: 2.5rem 0; }
+    .page-hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
+    .page-hero p { color: #cdd6e1; max-width: 60ch; margin: 0 auto; }
+
+    section { padding: 2.5rem 0; }
+    .section-title { font-size: 1.6rem; margin: 0 0 1rem; }
+    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; border: 1px solid #e9eef4; }
+
+    .about-grid { grid-template-columns: 1.2fr 0.8fr; align-items: start; gap: 2rem; }
+    .quote-highlight { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff; padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0; text-align: center; }
+    .quote-highlight p { margin: 0; font-size: 1.1rem; font-style: italic; color: #fff; }
+
+    .team-member { padding: 1rem 0; border-bottom: 1px solid #e9eef4; }
+    .team-member:last-child { border-bottom: none; }
+    .team-member h4 { margin: 0 0 0.25rem; color: var(--accent-2); }
+    .team-member .title { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+
+    .timeline-item { padding: 1rem 0; border-left: 3px solid var(--accent); padding-left: 1rem; margin-left: 0.5rem; }
+    .timeline-item h4 { margin: 0 0 0.25rem; color: var(--accent-2); }
+    .timeline-item .location { color: var(--muted); font-size: 0.9rem; }
+
+    footer { background: #0c1420; color: #cdd6e1; padding: 2rem 0; margin-top: 2rem; }
+    footer a { color: #cdd6e1; }
+    .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
+
+    @media (max-width: 680px) {
+      .nav ul { display: none; }
+      .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
+      .about-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div>Serving Cincinnati & Surrounding Regions</div>
+      <div class="contact-buttons">
+        <a href="tel:+19152036067">Call (915) 203-6067</a>
+        <a href="sms:+19152036067">Text (915) 203-6067</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <img src="mauslogo.png" alt="Law Firm Logo" style="height:60px;">
+        <span>James Maus, Attorney at Law</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a class="cta" href="tel:+19152036067">Call</a>
+        <a class="cta-text" href="sms:+19152036067">Text</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Meet Your Advocate</h1>
+        <p>Experienced trial and appellate attorney with a proven track record of protecting clients and winning cases.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid about-grid">
+        
+        <!-- Left column: main content -->
+        <div>
+          
+          <div class="quote-highlight">
+            <p>"I'm not a physician, but clients have thanked me for saving their lives."</p>
+          </div>
+
+          <div class="card">
+            <p>The most satisfying moments of James' career were when clients expressed that level of gratitude for his legal work. He spent many nights and weekends working on petitions to release non-violent prisoners from life sentences. His efforts resulted in dozens of men and women getting a second chance at life.</p>
+            
+            <p>James brings that same zeal to custody, criminal, divorce, and personal injury cases. He has won at the Ohio Supreme Court, the 6th Circuit Court of Appeals, and the First District Court of Appeals. You'll find his name on multi-million-dollar verdicts for personal injury cases. He has obtained not guilty verdicts in state, federal, and military courts. His courtroom litigation work has forced millions in settlements prior to trial, including a recent six-figure civil rights settlement against the Cincinnati Police.</p>
+            
+            <p>James is especially protective of clients in criminal and custody matters. Because of his length of service and success in the courtroom, he is able to charge lower rates than many in the community while maintaining a reasonable caseload so each client receives the attention they need <strong>and deserve</strong>.</p>
+            
+            <p>Please take a moment to review client testimonials. Another one of his favorite quotes is simple: <strong>"Text me."</strong> Just leave your name and legal issue if you aren't already a client.</p>
+          </div>
+
+          <div class="card">
+            <h3>Professional Experience</h3>
+            <div class="timeline-item">
+              <h4>Solo Practice</h4>
+              <div class="location">Cincinnati, Ohio • Current</div>
+              <p>Comprehensive legal services across multiple practice areas with focus on criminal defense, family law, and personal injury.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <h4>Of Counsel, Barr Jones & Associates</h4>
+              <div class="location">Cincinnati, Ohio</div>
+              <p>Provided specialized counsel and litigation support for complex cases.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <h4>Federal Public Defender's Office</h4>
+              <div class="location">Cincinnati, Ohio</div>
+              <p>Defended clients in federal criminal cases, gaining extensive experience in federal court procedures and criminal law.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <h4>U.S. Army JAG Corps</h4>
+              <div class="location">13 years Active & Reserve</div>
+              <p>Served as Judge Advocate General officer, handling court-martial defense, military justice, and administrative law matters.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right column: photo and credentials -->
+        <div>
+          <div class="card" style="text-align: center;">
+            <div style="aspect-ratio: 4 / 5; background: #e9eef4; border-radius: 12px; display: grid; place-items: center; margin-bottom: 1rem;">
+              <img src="headshot.jpg" alt="James Maus" style="border-radius: 12px; max-width: 100%; height: auto;">
+            </div>
+            <h3 style="margin: 0 0 0.5rem;">James Maus</h3>
+            <p style="color: var(--muted); margin: 0;">Attorney at Law</p>
+          </div>
+
+          <div class="card">
+            <h3>Education & Background</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 0.75rem;"><strong>Born:</strong> Taylor Mill, KY<br><small style="color: var(--muted);">Grandson of community leader Clemens "Bud" Deters</small></li>
+              <li style="margin-bottom: 0.75rem;"><strong>High School:</strong> Fisher Catholic (Lancaster, Ohio)<br><small style="color: var(--muted);">All-League Football, Jr. and Sr. year</small></li>
+              <li style="margin-bottom: 0.75rem;"><strong>College:</strong> Winona State University (MN)<br><small style="color: var(--muted);">B.S., Physics</small></li>
+              <li style="margin-bottom: 0.75rem;"><strong>Law School:</strong> William Mitchell (St. Paul, MN)<br><small style="color: var(--muted);">U.S. Army JAG School, University of Virginia</small></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Bar Admissions</h3>
+            <ul style="margin: 0.5rem 0;">
+              <li>Ohio State Bar</li>
+              <li>Texas State Bar</li>
+              <li>U.S. District Court for the Southern District of Ohio</li>
+              <li>Sixth Circuit Court of Appeals</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #f0f3f7;">
+      <div class="container">
+        <h2 class="section-title">Trusted Team</h2>
+        <div class="card">
+          <p>James associates with the highest caliber staff and co-counsel on his cases:</p>
+          
+          <div class="team-member">
+            <h4>Tamara Pavlik</h4>
+            <div class="title">Nurse Practitioner</div>
+            <p>Experienced nurse practitioner who consults on medical malpractice and personal injury cases, and assists with administrative matters. Her medical expertise is invaluable in understanding complex medical issues and building strong cases for clients.</p>
+          </div>
+          
+          <div class="team-member">
+            <h4>Lydia Czanik</h4>
+            <div class="title">Human Resources Specialist</div>
+            <p>Holds a master's degree in Human Resources and provides expertise in employment matters. Her specialized knowledge helps clients navigate complex workplace issues and employment law cases.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: var(--ink); color: #fff; text-align: center;">
+      <div class="container" style="padding: 2rem 0;">
+        <h2 style="color: #fff; margin: 0 0 1rem;">Ready to Work Together?</h2>
+        <p>Free consultation available. Contact James Maus today to discuss your legal matter.</p>
+        <div style="margin-top: 1.5rem;">
+          <a class="cta" href="tel:+19152036067" style="background: #fff; color: var(--ink); margin-right: 0.5rem;">Call (915) 203-6067</a>
+          <a class="cta-text" href="sms:+19152036067">Text (915) 203-6067</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center;">
+        <div>&copy; <span id="y"></span> Law Office of James Maus. All rights reserved.</div>
+        <div>
+          <a href="index.html">Home</a> | 
+          <a href="practice-areas.html">Practice Areas</a> | 
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="fineprint">This website is attorney advertising.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
