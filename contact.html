@@ -60,6 +60,7 @@
       height: 100%;
       object-fit: cover;
       box-shadow: var(--shadow);
+      padding-left: 2rem;
     }
     
     .hero-content {
@@ -107,47 +108,54 @@
     .day:last-child { border-bottom: none; }
     .day-name { font-weight: 600; color: var(--accent-2); }
 
-    /* Better consultation section */
+    /* Compact consultation section */
     .consultation-section {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border: 1px solid #dee2e6;
+      background: var(--accent-2);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
     }
     
     .consultation-content {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 2rem;
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
     }
     
     .consultation-text {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--ink-2);
+      flex: 1;
+    }
+    
+    .consultation-cta {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
     }
     
     .what-to-expect {
-      background: var(--ink);
+      background: rgba(255,255,255,0.1);
       color: #fff;
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      flex: 0 0 300px;
     }
     
-    .what-to-expect h3 {
-      margin: 0 0 1rem;
+    .what-to-expect h4 {
+      margin: 0 0 0.5rem;
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     
     .what-to-expect ul {
       margin: 0;
-      padding-left: 1.2rem;
-      color: #cdd6e1;
+      padding-left: 1rem;
+      font-size: 0.9rem;
     }
     
     .what-to-expect li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     footer { background: #0c1420; color: #cdd6e1; padding: 2rem 0; margin-top: 2rem; }
@@ -156,13 +164,14 @@
 
     @media (max-width: 768px) {
       .page-hero { flex-direction: column; min-height: auto; }
-      .hero-image { width: 100%; height: 250px; }
+      .hero-image { width: 100%; height: 250px; padding-left: 0; }
       .hero-content { width: 100%; padding: 2rem; }
       .hero-content h1 { font-size: 2rem; }
       .nav ul { display: none; }
       .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
       .contact-methods { grid-template-columns: 1fr; }
-      .consultation-content { grid-template-columns: 1fr; }
+      .consultation-content { flex-direction: column; }
+      .what-to-expect { flex: none; width: 100%; }
     }
   </style>
 </head>
@@ -317,29 +326,26 @@
 
     <section>
       <div class="container">
-        <div class="card consultation-section">
-          <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Free Consultation</h2>
-          
+        <div class="consultation-section">
           <div class="consultation-content">
             <div class="consultation-text">
-              <p style="margin: 0 0 1rem;">James Maus offers free consultations to discuss your legal matter and determine how he can help.</p>
-              <p style="margin: 0;">During your consultation, you'll learn about your options and get honest advice about your case.</p>
+              <h3 style="margin: 0 0 0.5rem; color: #fff;">Free Consultation Available</h3>
+              <p style="margin: 0; font-size: 1rem;">James Maus offers free consultations to discuss your legal matter. Get honest advice about your case with no obligation to hire.</p>
             </div>
-
+            
             <div class="what-to-expect">
-              <h3>What to Expect</h3>
+              <h4>What to Expect</h4>
               <ul>
-                <li>Confidential discussion of your case</li>
-                <li>Clear explanation of your legal options</li>
-                <li>Honest assessment of your situation</li>
-                <li>No obligation to hire</li>
-                <li>Direct access to James Maus</li>
+                <li>Confidential case discussion</li>
+                <li>Clear legal options</li>
+                <li>Honest assessment</li>
+                <li>Direct access to James</li>
               </ul>
             </div>
           </div>
           
-          <p style="margin-top: 2rem; color: var(--muted); font-size: 0.95rem; text-align: center;">
-            <strong>Prefer to text?</strong> Just leave your name and legal issue if you aren't already a client.
+          <p style="margin: 1rem 0 0; color: rgba(255,255,255,0.9); font-size: 0.9rem; text-align: center;">
+            <strong>Prefer to text?</strong> Just leave your name and legal issue.
           </p>
         </div>
       </div>
