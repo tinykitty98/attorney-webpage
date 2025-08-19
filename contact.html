@@ -107,6 +107,49 @@
     .day:last-child { border-bottom: none; }
     .day-name { font-weight: 600; color: var(--accent-2); }
 
+    /* Better consultation section */
+    .consultation-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border: 1px solid #dee2e6;
+    }
+    
+    .consultation-content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+      align-items: center;
+    }
+    
+    .consultation-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--ink-2);
+    }
+    
+    .what-to-expect {
+      background: var(--ink);
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    
+    .what-to-expect h3 {
+      margin: 0 0 1rem;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    
+    .what-to-expect ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: #cdd6e1;
+    }
+    
+    .what-to-expect li {
+      margin-bottom: 0.5rem;
+    }
+
     footer { background: #0c1420; color: #cdd6e1; padding: 2rem 0; margin-top: 2rem; }
     footer a { color: #cdd6e1; }
     .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
@@ -119,6 +162,7 @@
       .nav ul { display: none; }
       .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
       .contact-methods { grid-template-columns: 1fr; }
+      .consultation-content { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -201,6 +245,16 @@
             <div style="margin-top: 1.5rem;">
               <a class="cta" href="https://maps.google.com/?q=810+Sycamore+Street,+Cincinnati,+OH+45202" target="_blank" rel="noopener">Get Directions</a>
             </div>
+            
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e9eef4;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="james-library.jpg" alt="James Maus" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div>
+                  <h3 style="margin: 0 0 0.25rem; color: var(--accent-2); font-size: 1.1rem;">Meet James</h3>
+                  <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">James Maus, ready to help with your legal needs</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="card">
@@ -242,19 +296,6 @@
               Contact James directly for urgent legal matters.
             </p>
           </div>
-
-        </div>
-        
-        <div style="margin-top: 1.5rem;">
-          <div class="card" style="text-align: center;">
-            <div style="display: flex; align-items: center; gap: 1rem; justify-content: center;">
-              <img src="james-library.jpg" alt="James Maus" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <div style="text-align: left;">
-                <h3 style="margin: 0 0 0.25rem; color: var(--accent-2); font-size: 1.1rem;">Meet James</h3>
-                <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">James Maus, ready to help with your legal needs</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -273,19 +314,20 @@
       </div>
     </section>
 
-    <section style="background: #f0f3f7;">
+    <section>
       <div class="container">
-        <div class="card" style="text-align: center;">
-          <h2 class="section-title">Free Consultation Available</h2>
+        <div class="card consultation-section">
+          <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Free Consultation</h2>
           
-          <div class="grid contact-grid" style="text-align: left; align-items: stretch;">
-            <div style="display: flex; align-items: center; padding: 1.5rem; border: 1px solid #e9eef4; border-radius: var(--radius); background: var(--card);">
-              <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">James Maus offers free consultations to discuss your legal matter and determine how he can help. During your consultation, you'll learn about your options and get honest advice about your case.</p>
+          <div class="consultation-content">
+            <div class="consultation-text">
+              <p style="margin: 0 0 1rem;">James Maus offers free consultations to discuss your legal matter and determine how he can help.</p>
+              <p style="margin: 0;">During your consultation, you'll learn about your options and get honest advice about your case.</p>
             </div>
 
-            <div style="background: var(--ink); color: #fff; padding: 1.5rem; border-radius: var(--radius);">
-              <h3 style="color: #fff; margin: 0 0 0.5rem;">What to Expect</h3>
-              <ul style="margin: 0; color: #cdd6e1;">
+            <div class="what-to-expect">
+              <h3>What to Expect</h3>
+              <ul>
                 <li>Confidential discussion of your case</li>
                 <li>Clear explanation of your legal options</li>
                 <li>Honest assessment of your situation</li>
@@ -295,7 +337,7 @@
             </div>
           </div>
           
-          <p style="margin-top: 1rem; color: var(--muted); font-size: 0.9rem; text-align: center;">
+          <p style="margin-top: 2rem; color: var(--muted); font-size: 0.95rem; text-align: center;">
             <strong>Prefer to text?</strong> Just leave your name and legal issue if you aren't already a client.
           </p>
         </div>
