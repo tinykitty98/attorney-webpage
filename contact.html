@@ -45,13 +45,46 @@
     nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
     nav a { text-decoration: none; color: var(--ink); font-weight: 600; transition: color 0.2s; }
     nav a:hover { color: var(--accent-2); }
-    .cta { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent-2); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(52,93,126,0.25); margin-right: 0.5rem; }
-    .cta-text { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(198,161,100,0.25); }
 
-    .page-hero { background: var(--ink); color: #fff; text-align: center; }
-    .page-hero .container { padding: 2.5rem 0; }
-    .page-hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
-    .page-hero p { color: #cdd6e1; max-width: 60ch; margin: 0 auto; }
+    /* Hero section with large Mt. Adams image */
+    .page-hero { 
+      background: var(--ink);
+      color: #fff; 
+      display: flex;
+      align-items: stretch;
+      min-height: 300px;
+    }
+    
+    .hero-image {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+    
+    .hero-content {
+      width: 50%;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.5rem; 
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+    
+    .hero-content p {
+      color: #cdd6e1; 
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Buttons and cards */
+    .cta { display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; background: var(--accent-2); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(52,93,126,0.25); margin-right: 0.5rem; }
+    .cta-text { display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(198,161,100,0.25); }
 
     section { padding: 2.5rem 0; }
     .section-title { font-size: 1.6rem; margin: 0 0 1rem; }
@@ -61,10 +94,10 @@
     .contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
     .contact-list li { display: flex; gap: 0.75rem; align-items: flex-start; }
     .contact-list strong { min-width: 80px; color: var(--accent-2); }
-    .map-card iframe { width: 100%; height: 300px; border: 0; border-radius: 12px; }
+    .map-card iframe { width: 100%; height: 260px; border: 0; border-radius: 12px; }
 
     .contact-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .contact-method { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff; padding: 1.5rem; border-radius: var(--radius); text-align: center; text-decoration: none; transition: transform 0.2s; }
+    .contact-method { background: var(--accent-2); color: #fff; padding: 1.5rem; border-radius: var(--radius); text-align: center; text-decoration: none; transition: transform 0.2s; }
     .contact-method:hover { transform: translateY(-2px); color: #fff; }
     .contact-method h3 { margin: 0 0 0.5rem; color: #fff; }
     .contact-method p { margin: 0; color: rgba(255,255,255,0.9); }
@@ -78,7 +111,11 @@
     footer a { color: #cdd6e1; }
     .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
 
-    @media (max-width: 680px) {
+    @media (max-width: 768px) {
+      .page-hero { flex-direction: column; min-height: auto; }
+      .hero-image { width: 100%; height: 250px; }
+      .hero-content { width: 100%; padding: 2rem; }
+      .hero-content h1 { font-size: 2rem; }
       .nav ul { display: none; }
       .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
       .contact-methods { grid-template-columns: 1fr; }
@@ -115,7 +152,8 @@
 
   <main>
     <section class="page-hero">
-      <div class="container">
+      <img src="mt-adams.jpg" alt="Mt. Adams Cincinnati View" class="hero-image">
+      <div class="hero-content">
         <h1>Contact & Location</h1>
         <p>Ready to discuss your case? Contact James Maus for a free consultation today.</p>
       </div>
@@ -125,19 +163,20 @@
       <div class="container">
         <div class="contact-methods">
           <a href="tel:+19152036067" class="contact-method">
-            <h3>📞 Call Now</h3>
+            <h3>Call Now</h3>
             <p>(915) 203-6067</p>
-            <small>Tap to call directly</small>
           </a>
           <a href="sms:+19152036067" class="contact-method">
-            <h3>💬 Text Message</h3>
+            <h3>Text Message</h3>
             <p>(915) 203-6067</p>
-            <small>Quick and convenient</small>
+          </a>
+          <a href="mailto:attyjamesmaus@aol.com" class="contact-method">
+            <h3>Email</h3>
+            <p>attyjamesmaus@aol.com</p>
           </a>
         </div>
 
         <div class="grid contact-grid">
-          
           <div class="card">
             <h2 class="section-title">Office Information</h2>
             <ul class="contact-list">
@@ -146,12 +185,12 @@
                 <span>810 Sycamore Street<br>Cincinnati, OH 45202</span>
               </li>
               <li>
-                <strong>Phone:</strong> 
-                <span><a href="tel:+19152036067">(915) 203-6067</a></span>
+                <strong>Mobile:</strong> 
+                <span>(915) 203-6067</span>
               </li>
               <li>
-                <strong>Text:</strong> 
-                <span><a href="sms:+19152036067">(915) 203-6067</a></span>
+                <strong>Email:</strong> 
+                <span><a href="mailto:attyjamesmaus@aol.com">attyjamesmaus@aol.com</a></span>
               </li>
               <li>
                 <strong>Website:</strong> 
@@ -203,7 +242,6 @@
               Contact James directly for urgent legal matters.
             </p>
           </div>
-
         </div>
       </div>
     </section>
@@ -219,24 +257,6 @@
             src="https://www.google.com/maps?q=810+Sycamore+Street,+Cincinnati,+OH+45202&output=embed">
           </iframe>
         </div>
-        
-        <div style="margin-top: 1rem;">
-          <div class="card">
-            <h3>Parking & Accessibility</h3>
-            <p>Street parking is available on Sycamore Street and nearby side streets. The building is accessible and located in downtown Cincinnati, easily accessible by public transportation.</p>
-            
-            <h3>Serving Greater Cincinnati</h3>
-            <p>While our office is located in downtown Cincinnati, James Maus serves clients throughout the Greater Cincinnati area and beyond, including:</p>
-            <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin: 1rem 0;">
-              <li>Hamilton County</li>
-              <li>Butler County</li>
-              <li>Warren County</li>
-              <li>Clermont County</li>
-              <li>Northern Kentucky</li>
-              <li>Southeastern Indiana</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -244,25 +264,25 @@
       <div class="container">
         <div class="card" style="text-align: center;">
           <h2 class="section-title">Free Consultation Available</h2>
-          <p>James Maus offers free consultations to discuss your legal matter and determine how he can help. During your consultation, you'll learn about your options and get honest advice about your case.</p>
           
-          <div style="background: var(--ink); color: #fff; padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
-            <h3 style="color: #fff; margin: 0 0 0.5rem;">What to Expect</h3>
-            <ul style="text-align: left; max-width: 500px; margin: 0 auto; color: #cdd6e1;">
-              <li>Confidential discussion of your case</li>
-              <li>Clear explanation of your legal options</li>
-              <li>Honest assessment of your situation</li>
-              <li>No obligation to hire</li>
-              <li>Direct access to James Maus</li>
-            </ul>
-          </div>
+          <div class="grid contact-grid" style="text-align: left; align-items: stretch;">
+            <div style="display: flex; align-items: center; padding: 1.5rem; border: 1px solid #e9eef4; border-radius: var(--radius); background: var(--card);">
+              <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">James Maus offers free consultations to discuss your legal matter and determine how he can help. During your consultation, you'll learn about your options and get honest advice about your case.</p>
+            </div>
 
-          <div style="margin-top: 1.5rem;">
-            <a class="cta" href="tel:+19152036067" style="margin-right: 0.5rem;">Call (915) 203-6067</a>
-            <a class="cta-text" href="sms:+19152036067">Text (915) 203-6067</a>
+            <div style="background: var(--ink); color: #fff; padding: 1.5rem; border-radius: var(--radius);">
+              <h3 style="color: #fff; margin: 0 0 0.5rem;">What to Expect</h3>
+              <ul style="margin: 0; color: #cdd6e1;">
+                <li>Confidential discussion of your case</li>
+                <li>Clear explanation of your legal options</li>
+                <li>Honest assessment of your situation</li>
+                <li>No obligation to hire</li>
+                <li>Direct access to James Maus</li>
+              </ul>
+            </div>
           </div>
           
-          <p style="margin-top: 1rem; color: var(--muted); font-size: 0.9rem;">
+          <p style="margin-top: 1rem; color: var(--muted); font-size: 0.9rem; text-align: center;">
             <strong>Prefer to text?</strong> Just leave your name and legal issue if you aren't already a client.
           </p>
         </div>
@@ -277,7 +297,8 @@
         </p>
         <div>
           <a class="cta" href="tel:+19152036067" style="background: #fff; color: var(--ink); margin-right: 0.5rem;">Call Now</a>
-          <a class="cta-text" href="sms:+19152036067">Send Text</a>
+          <a class="cta-text" href="sms:+19152036067" style="margin-right: 0.5rem;">Send Text</a>
+          <a class="cta" href="mailto:attyjamesmaus@aol.com" style="background: var(--accent);">Email</a>
         </div>
       </div>
     </section>

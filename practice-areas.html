@@ -48,7 +48,14 @@
     .cta { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent-2); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(52,93,126,0.25); margin-right: 0.5rem; }
     .cta-text { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(198,161,100,0.25); }
 
-    .page-hero { background: var(--ink); color: #fff; text-align: center; }
+    .page-hero { 
+      background-image: linear-gradient(rgba(14, 27, 42, 0.7), rgba(14, 27, 42, 0.7)), url('cincinnati-skyline.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff; 
+      text-align: center; 
+    }
     .page-hero .container { padding: 2.5rem 0; }
     .page-hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
     .page-hero p { color: #cdd6e1; max-width: 60ch; margin: 0 auto; }
@@ -57,13 +64,10 @@
     .section-title { font-size: 1.6rem; margin: 0 0 1rem; }
     .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; border: 1px solid #e9eef4; }
 
-    .practice-detail { margin-bottom: 2rem; }
+    .practice-detail { margin-bottom: 0; }
     .practice-detail h3 { color: var(--accent-2); margin: 0 0 0.75rem; font-size: 1.3rem; }
     .practice-detail ul { margin: 0.75rem 0; color: var(--muted); }
     .practice-detail li { margin-bottom: 0.25rem; }
-
-    .results-highlight { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff; text-align: center; border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
-    .results-highlight h4 { margin: 0 0 0.5rem; color: #fff; }
 
     footer { background: #0c1420; color: #cdd6e1; padding: 2rem 0; margin-top: 2rem; }
     footer a { color: #cdd6e1; }
@@ -100,6 +104,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+    </div>
   </header>
 
   <main>
@@ -113,129 +118,86 @@
     <section>
       <div class="container">
         
-        <div class="practice-detail card">
-          <h3>Criminal Defense & Court-Martial Defense</h3>
-          <p>James brings extensive experience from his time as a U.S. Army JAG officer and Federal Public Defender to provide aggressive criminal defense representation.</p>
-          <ul>
-            <li>State criminal charges (felonies and misdemeanors)</li>
-            <li>Federal criminal defense</li>
-            <li>Military court-martial defense</li>
-            <li>Appeals to state and federal appellate courts</li>
-            <li>DUI/OVI defense</li>
-            <li>White collar crime defense</li>
-          </ul>
-          <div class="results-highlight">
-            <h4>Notable Results</h4>
-            <p>Not guilty verdicts in state, federal, and military courts. Successful appeals resulting in sentence reductions and case dismissals.</p>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          
+          <div class="practice-detail card">
+            <h3>Criminal Defense & Court-Martial</h3>
+            <p>Extensive experience from U.S. Army JAG officer and Federal Public Defender providing aggressive criminal defense representation.</p>
+            <ul>
+              <li>State and federal criminal charges</li>
+              <li>Military court-martial defense</li>
+              <li>Appeals and post-conviction relief</li>
+              <li>DUI/OVI defense</li>
+            </ul>
+            <div style="background: var(--accent-2); color: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+              <strong>Not guilty verdicts in state, federal, and military courts</strong>
+            </div>
           </div>
-        </div>
 
-        <div class="practice-detail card">
-          <h3>Domestic Relations & Family Law</h3>
-          <p>Protecting families and children through compassionate yet aggressive representation in domestic relations matters.</p>
-          <ul>
-            <li>Child custody and parenting time</li>
-            <li>Divorce and dissolution</li>
-            <li>Spousal support and child support</li>
-            <li>Property division</li>
-            <li>Domestic violence protection orders</li>
-            <li>Adoption proceedings</li>
-          </ul>
-          <div class="results-highlight">
-            <h4>Client-Focused Approach</h4>
-            <p>James understands that family law cases affect your most important relationships. He provides personal attention to achieve the best outcomes for families.</p>
+          <div class="practice-detail card">
+            <h3>Family Law & Domestic Relations</h3>
+            <p>Protecting families and children through compassionate yet aggressive representation in domestic relations matters.</p>
+            <ul>
+              <li>Child custody and parenting time</li>
+              <li>Divorce and dissolution</li>
+              <li>Spousal and child support</li>
+              <li>Domestic violence protection orders</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="practice-detail card">
-          <h3>Personal Injury</h3>
-          <p>Aggressive representation for injury victims, with a track record of multi-million-dollar verdicts and settlements.</p>
-          <ul>
-            <li>Motor vehicle accidents</li>
-            <li>Slip and fall injuries</li>
-            <li>Product liability</li>
-            <li>Wrongful death cases</li>
-            <li>Premises liability</li>
-            <li>Construction accidents</li>
-          </ul>
-          <div class="results-highlight">
-            <h4>Proven Results</h4>
-            <p>Multi-million-dollar verdicts and settlements. Litigation work that has forced major settlements before trial.</p>
+          <div class="practice-detail card">
+            <h3>Personal Injury</h3>
+            <p>Aggressive representation for injury victims with a track record of multi-million-dollar verdicts and settlements.</p>
+            <ul>
+              <li>Motor vehicle accidents</li>
+              <li>Slip and fall injuries</li>
+              <li>Product liability</li>
+              <li>Wrongful death cases</li>
+            </ul>
+            <div style="background: var(--accent); color: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+              <strong>Multi-million-dollar verdicts and settlements</strong>
+            </div>
           </div>
-        </div>
 
-        <div class="practice-detail card">
-          <h3>Medical Malpractice</h3>
-          <p>Complex medical malpractice cases require specialized knowledge and resources. James works with experienced medical professionals to build strong cases.</p>
-          <ul>
-            <li>Surgical errors</li>
-            <li>Misdiagnosis and delayed diagnosis</li>
-            <li>Medication errors</li>
-            <li>Birth injuries</li>
-            <li>Hospital negligence</li>
-            <li>Nursing home abuse and neglect</li>
-          </ul>
-          <p><strong>Team Approach:</strong> James works with Tamara Pavlik, an experienced nurse practitioner, who provides medical expertise for malpractice and personal injury cases.</p>
-        </div>
-
-        <div class="practice-detail card">
-          <h3>Employment Law</h3>
-          <p>Protecting workers' rights and helping employers navigate complex employment issues.</p>
-          <ul>
-            <li>Wrongful termination</li>
-            <li>Discrimination and harassment</li>
-            <li>Wage and hour disputes</li>
-            <li>Employment contracts</li>
-            <li>Workplace retaliation</li>
-            <li>FMLA violations</li>
-          </ul>
-          <p><strong>Expert Support:</strong> Lydia Czanik, who holds a master's degree in Human Resources, provides specialized expertise in employment matters.</p>
-        </div>
-
-        <div class="practice-detail card">
-          <h3>Civil Rights & Police Misconduct</h3>
-          <p>Holding law enforcement accountable and protecting constitutional rights of citizens.</p>
-          <ul>
-            <li>Excessive force cases</li>
-            <li>False arrest and imprisonment</li>
-            <li>Constitutional violations (Section 1983 claims)</li>
-            <li>Wrongful conviction cases</li>
-            <li>Prison conditions litigation</li>
-          </ul>
-          <div class="results-highlight">
-            <h4>Recent Success</h4>
-            <p>Six-figure civil rights settlement against the Cincinnati Police Department.</p>
+          <div class="practice-detail card">
+            <h3>Medical Malpractice</h3>
+            <p>Complex medical cases with specialized knowledge and expert resources.</p>
+            <ul>
+              <li>Surgical errors and misdiagnosis</li>
+              <li>Medication errors</li>
+              <li>Birth injuries</li>
+              <li>Nursing home negligence</li>
+            </ul>
+            <p><strong>Expert Team:</strong> Tamara Pavlik, experienced nurse practitioner, provides medical expertise.</p>
           </div>
-        </div>
 
-        <div class="practice-detail card">
-          <h3>Federal Disability Retirement</h3>
-          <p>Helping federal employees secure the disability retirement benefits they deserve.</p>
-          <ul>
-            <li>FERS disability retirement applications</li>
-            <li>CSRS disability retirement</li>
-            <li>Appeals of denied applications</li>
-            <li>Medical documentation assistance</li>
-            <li>Administrative hearings</li>
-          </ul>
-        </div>
-
-        <div class="practice-detail card">
-          <h3>Appeals & Appellate Advocacy</h3>
-          <p>Experienced appellate lawyer with victories at the Ohio Supreme Court, U.S. Court of Appeals for the Sixth Circuit, and Ohio Courts of Appeals.</p>
-          <ul>
-            <li>Criminal appeals</li>
-            <li>Civil appeals</li>
-            <li>Post-conviction relief</li>
-            <li>Sentence reduction petitions</li>
-            <li>Federal habeas corpus petitions</li>
-          </ul>
-          <div class="results-highlight">
-            <h4>Life-Changing Results</h4>
-            <p>James has successfully petitioned for the release of dozens of non-violent prisoners serving life sentences, giving them a second chance at life.</p>
+          <div class="practice-detail card">
+            <h3>Employment Law</h3>
+            <p>Protecting workers' rights and helping employers navigate complex employment issues.</p>
+            <ul>
+              <li>Wrongful termination</li>
+              <li>Discrimination and harassment</li>
+              <li>Wage and hour disputes</li>
+              <li>Workplace retaliation</li>
+            </ul>
+            <p><strong>HR Expertise:</strong> Lydia Czanik provides specialized Human Resources knowledge.</p>
           </div>
-        </div>
 
+          <div class="practice-detail card">
+            <h3>Civil Rights & Police Misconduct</h3>
+            <p>Holding law enforcement accountable and protecting constitutional rights.</p>
+            <ul>
+              <li>Excessive force cases</li>
+              <li>False arrest and imprisonment</li>
+              <li>Constitutional violations</li>
+              <li>Wrongful conviction cases</li>
+            </ul>
+            <div style="background: var(--accent-2); color: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center;">
+              <strong>Recent six-figure settlement against Cincinnati Police</strong>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 

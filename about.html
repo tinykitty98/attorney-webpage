@@ -48,17 +48,68 @@
     .cta { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent-2); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(52,93,126,0.25); margin-right: 0.5rem; }
     .cta-text { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(198,161,100,0.25); }
 
-    .page-hero { background: var(--ink); color: #fff; text-align: center; }
-    .page-hero .container { padding: 2.5rem 0; }
-    .page-hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
-    .page-hero p { color: #cdd6e1; max-width: 60ch; margin: 0 auto; }
+    /* Page hero with video background */
+    .page-hero { 
+      position: relative;
+      background: #345d7e; /* Fallback color */
+      color: #fff; 
+      text-align: center; 
+      overflow: hidden;
+    }
+    
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -40%);
+      z-index: 1;
+      object-fit: cover;
+      filter: contrast(1.1) saturate(1.2);
+      transition: transform 4s ease-out;
+    }
+    
+    .hero-video.pan-final {
+      transform: translate(-52%, -41%);
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(14, 27, 42, 0.6);
+      z-index: 2;
+    }
+    
+    .page-hero .container { 
+      position: relative;
+      z-index: 3;
+      padding: 2.5rem 0; 
+    }
+    .page-hero h1 { 
+      font-size: 2.2rem; 
+      margin: 0 0 0.5rem; 
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .page-hero p { 
+      color: #e9eef4; 
+      max-width: 60ch; 
+      margin: 0 auto; 
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
 
     section { padding: 2.5rem 0; }
     .section-title { font-size: 1.6rem; margin: 0 0 1rem; }
     .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; border: 1px solid #e9eef4; }
 
     .about-grid { grid-template-columns: 1.2fr 0.8fr; align-items: start; gap: 2rem; }
-    .quote-highlight { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff; padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0; text-align: center; }
+    .quote-highlight { background: var(--accent-2); color: #fff; padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0; text-align: center; }
     .quote-highlight p { margin: 0; font-size: 1.1rem; font-style: italic; color: #fff; }
 
     .team-member { padding: 1rem 0; border-bottom: 1px solid #e9eef4; }
@@ -111,6 +162,18 @@
 
   <main>
     <section class="page-hero">
+      <!-- Video Background -->
+      <video 
+        class="hero-video" 
+        muted 
+        playsinline
+        poster="ohio-river-poster.jpg"
+        id="heroVideo">
+        <source src="ohio-river.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+      </video>
+      <div class="hero-overlay"></div>
+      
       <div class="container">
         <h1>Meet Your Advocate</h1>
         <p>Experienced trial and appellate attorney with a proven track record of protecting clients and winning cases.</p>
@@ -196,6 +259,10 @@
             </ul>
           </div>
 
+          <div id="logoCard" style="display: grid; place-items: center; margin-top: 1rem;">
+            <img src="mauslogo2.png" alt="Law Firm Logo" style="max-width: 100%; height: auto; max-height: 200px;">
+          </div>
+
         </div>
       </div>
     </section>
@@ -249,6 +316,56 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    
+    // Simple video control - play at 0.7 speed, then pan after it ends
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.getElementById('heroVideo');
+      if (video) {
+        video.addEventListener('loadeddata', function() {
+          video.playbackRate = 0.7; // 70% of normal speed
+          video.play();
+        });
+        
+        video.addEventListener('ended', function() {
+          // Keep video on last frame
+          video.pause();
+          video.currentTime = video.duration;
+          
+          // Start the subtle pan after video ends
+          video.classList.add('pan-final');
+        });
+      }
+      
+      // Auto-adjust logo card height to match left column
+      function adjustLogoCardHeight() {
+        const leftColumn = document.querySelector('.about-grid > div:first-child');
+        const logoCard = document.getElementById('logoCard');
+        
+        if (leftColumn && logoCard) {
+          // Wait for layout to settle
+          setTimeout(() => {
+            const leftColumnHeight = leftColumn.offsetHeight;
+            const rightColumnElements = document.querySelectorAll('.about-grid > div:last-child > .card:not(#logoCard)');
+            
+            let rightColumnUsedHeight = 0;
+            rightColumnElements.forEach(el => {
+              rightColumnUsedHeight += el.offsetHeight;
+              rightColumnUsedHeight += 16; // gap between cards
+            });
+            
+            const availableHeight = leftColumnHeight - rightColumnUsedHeight - 16; // subtract final gap
+            if (availableHeight > 100) { // minimum height check
+              logoCard.style.height = availableHeight + 'px';
+            }
+          }, 100);
+        }
+      }
+      
+      // Adjust on page load and window resize
+      adjustLogoCardHeight();
+      window.addEventListener('resize', adjustLogoCardHeight);
+      window.addEventListener('load', adjustLogoCardHeight);
+    });
   </script>
 </body>
 </html>
