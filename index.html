@@ -53,12 +53,66 @@
     .cta { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent-2); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(52,93,126,0.25); margin-right: 0.5rem; }
     .cta-text { display: inline-block; padding: 0.65rem 1rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; box-shadow: 0 6px 16px rgba(198,161,100,0.25); }
 
-    /* Hero */
-    .hero { background: radial-gradient(1200px 600px at 10% -10%, #e9eef4, transparent), #fff; border-bottom: 1px solid #e6ebf1; }
-    .hero .container { padding: 3.5rem 0; display: grid; gap: 2rem; }
-    .eyebrow { color: var(--accent-2); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
-    .hero h1 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin: 0.5rem 0; line-height: 1.2; }
-    .hero p { color: var(--muted); max-width: 65ch; }
+    /* Hero with video background */
+    .hero { 
+      position: relative;
+      background: #345d7e; /* Fallback color */
+      border-bottom: 1px solid #e6ebf1; 
+      overflow: hidden;
+    }
+    
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      object-fit: cover;
+      filter: contrast(1.1) saturate(1.2);
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(14, 27, 42, 0.6); /* Dark overlay for text readability */
+      z-index: 2;
+    }
+    
+    .hero .container { 
+      position: relative;
+      z-index: 3;
+      padding: 3.5rem 0; 
+      display: grid; 
+      gap: 2rem; 
+    }
+    
+    /* Enhance text for video background */
+    .hero h1, .hero p, .eyebrow {
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero p:last-of-type {
+      color: #e9eef4;
+    }
+    
+    /* Mobile video optimization */
+    @media (max-width: 768px) {
+      .hero-video {
+        display: none; /* Use static background on mobile for performance */
+      }
+      .hero {
+        background: linear-gradient(135deg, var(--accent-2), var(--accent)),
+                    url('cincinnati-sunset-fallback.jpg') center/cover;
+      }
+    }
     .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
     .btn-outline { border: 1px solid var(--accent-2); color: var(--accent-2); padding: 0.6rem 1rem; border-radius: 999px; text-decoration: none; }
 
@@ -84,11 +138,56 @@
     footer a { color: #cdd6e1; }
     .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
 
+    /* Mobile menu */
+    .mobile-menu-btn { 
+      display: none; 
+      background: none; 
+      border: none; 
+      font-size: 1.5rem; 
+      cursor: pointer; 
+      color: var(--ink);
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid #e6ebf1;
+      box-shadow: 0 4px 12px var(--ring);
+      z-index: 10;
+    }
+    
+    .mobile-nav.active { display: block; }
+    
+    .mobile-nav ul {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0.5rem;
+    }
+    
+    .mobile-nav a {
+      padding: 0.75rem;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+    
+    .mobile-nav a:hover {
+      background: #f0f3f7;
+    }
+
     /* Small screens */
     @media (max-width: 680px) {
       .nav ul { display: none; }
+      .mobile-menu-btn { display: block; }
       .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
       .contact-actions { flex-direction: column; align-items: center; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions a { text-align: center; }
+      nav { position: relative; }
     }
   </style>
 </head>
@@ -119,29 +218,45 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+        <div class="mobile-nav" id="mobileNav">
+          <ul>
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="practice-areas.html" onclick="closeMobileMenu()">Practice Areas</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+          </ul>
+        </div>
       </nav>
-      <div>
-        <a class="cta" href="tel:+19152036067">Call</a>
-        <a class="cta-text" href="sms:+19152036067">Text</a>
-      </div>
     </div>
   </header>
 
   <main id="main">
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
+      <!-- Video Background -->
+      <video 
+        class="hero-video" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        poster="cincinnati-sunset-poster.jpg">
+        <source src="cincinnati-sunset.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+      </video>
+      <div class="hero-overlay"></div>
+      
       <div class="container">
         <div>
           <div class="eyebrow">Trusted Trial & Appellate Counsel</div>
           <h1 id="hero-title">Protecting clients. Winning cases. Changing lives.</h1>
           <p>James Maus has secured victories in state, federal, and military courts, from life-sentence reversals to multi-million-dollar verdicts. His courtroom work has forced major settlements and earned clients second chances at life. Every case gets his full attention, no matter the stakes.</p>
-          <p style="font-weight:600; color:var(--ink-2); margin-top:0.75rem;">
+          <p style="font-weight:600; margin-top:0.75rem;">
             Licensed in Ohio, Texas, the U.S. District Court for the Southern District of Ohio, and the Sixth Circuit Court of Appeals.
           </p>
           <div class="hero-actions">
-            <a class="cta" href="tel:+19152036067">Call (915) 203-6067</a>
-            <a class="cta-text" href="sms:+19152036067">Text (915) 203-6067</a>
-            <a class="btn-outline" href="practice-areas.html">Explore Practice Areas</a>
+            <a class="btn-outline" href="practice-areas.html" style="border-color: #fff; color: #fff;">Explore Practice Areas</a>
           </div>
         </div>
       </div>
@@ -240,6 +355,27 @@
   <script>
     // Update year automatically
     document.getElementById('y').textContent = new Date().getFullYear();
+    
+    // Mobile menu functionality
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+    }
+    
+    function closeMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.remove('active');
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
   </script>
 
   <!-- Structured data to help with SEO -->
