@@ -7,23 +7,97 @@
   <meta name="description" content="Read what clients say about James Maus. Proven results in family law, criminal defense, personal injury, and more. Cincinnati attorney with excellent reviews." />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicons/android-chrome-512x512.png">
 
-  <!-- Structured Data for Logo -->
+  <!-- Structured Data for Testimonials -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "url": "https://jamesmauslaw.com/testimonials",
-    "logo": "https://jamesmauslaw.com/mauslogo.png",
-    "image": "https://jamesmauslaw.com/mauslogo2.png",
-    "name": "Testimonials | James Maus Law"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "James Maus Law",
+      "url": "https://jamesmauslaw.com/testimonials",
+      "logo": [
+        "https://jamesmauslaw.com/images/mauslogo.png",
+        "https://jamesmauslaw.com/images/mauslogo2.png"
+      ],
+      "image": [
+        "https://jamesmauslaw.com/images/mauslogo.png",
+        "https://jamesmauslaw.com/images/mauslogo2.png",
+        "https://jamesmauslaw.com/images/headshot.jpg",
+        "https://jamesmauslaw.com/images/james-library.jpg"
+      ],
+      "creator": {
+        "@type": "Person",
+        "name": "Anna Maus",
+        "jobTitle": "Website Designer",
+        "url": "mailto:anna.maus@utah.edu"
+      },
+      "priceRange": "Free Consultation / Flexible Rates"
+    },
+    {
+      "@type": "Person",
+      "name": "James Maus",
+      "jobTitle": "Attorney at Law",
+      "image": "https://jamesmauslaw.com/images/headshot.jpg",
+      "url": "https://jamesmauslaw.com",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "James Maus Law",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "810 Sycamore Street",
+          "addressLocality": "Cincinnati",
+          "addressRegion": "OH",
+          "postalCode": "45202",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-915-203-6067",
+        "email": "attyjamesmaus@aol.com"
+      },
+      "alumniOf": [
+        {"@type": "EducationalOrganization","name": "William Mitchell College of Law","location": "St. Paul, MN"},
+        {"@type": "EducationalOrganization","name": "Winona State University","location": "Minnesota"},
+        {"@type": "EducationalOrganization","name": "Fisher Catholic High School","location": "Lancaster, Ohio"}
+      ],
+      "memberOf": [
+        {"@type": "Organization","name": "Ohio State Bar"},
+        {"@type": "Organization","name": "Texas State Bar"},
+        {"@type": "Organization","name": "U.S. District Court for the Southern District of Ohio"}
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Attorney",
+        "occupationLocation": {"@type": "City","name": "Cincinnati, OH"},
+        "skills": ["Criminal Defense","Family Law","Personal Injury","Medical Malpractice","Employment Law","Civil Rights"]
+      },
+      "award": [
+        "Multi-million-dollar verdicts",
+        "Not guilty verdicts in state, federal, and military courts",
+        "Six-figure civil rights settlement against Cincinnati Police"
+      ],
+      "knowsAbout": [
+        "Court-martial defense",
+        "Federal criminal defense", 
+        "Appellate advocacy",
+        "Military justice",
+        "Life sentence appeals",
+        "Civil rights litigation"
+      ],
+      "colleague": [
+        {"@type": "Person","name": "Tamara Pavlik","jobTitle": "Nurse Practitioner","description": "Medical expert for malpractice and personal injury cases"},
+        {"@type": "Person","name": "Lydia Czanik","jobTitle": "Human Resources Specialist","description": "Employment law and HR expertise"}
+      ],
+      "sameAs": ["https://jamesmauslaw.com"]
+      }
+    ]
   }
   </script>
 
@@ -144,7 +218,7 @@
     }
 
     .page-hero { 
-      background: linear-gradient(rgba(14, 27, 42, 0.7), rgba(14, 27, 42, 0.7)), url('cincinnati-daytime-skyline.jpg');
+      background: linear-gradient(rgba(14, 27, 42, 0.7), rgba(14, 27, 42, 0.7)), url('/images/cincinnati-daytime-skyline.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -387,7 +461,7 @@
   <header>
     <div class="container nav" role="navigation" aria-label="Primary">
       <div class="brand">
-        <img src="mauslogo.png" alt="James Maus Law Firm Logo" style="height:60px;">
+        <img src="/images/mauslogo.png" alt="James Maus Law Firm Logo" style="height:60px;">
         <span>James Maus, Attorney at Law</span>
       </div>
       <nav>
@@ -567,10 +641,10 @@ I'll recommend anyone."
       <div style="display:flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center;">
         <div>&copy; <span id="y"></span> Law Office of James Maus. All rights reserved.</div>
         <div>
-          <a href="index.html">Home</a> | 
-          <a href="practice-areas.html">Practice Areas</a> | 
-          <a href="about.html">About</a> | 
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a> | 
+          <a href="/about/">About</a> | 
+          <a href="/testimonials/">Testimonials</a> |
+          <a href="/contact/">Contact</a>
         </div>
       </div>
       <div class="fineprint">
@@ -622,75 +696,6 @@ I'll recommend anyone."
         closeMobileMenu();
       }
     });
-  </script>
-
-  <!-- Enhanced Structured Data for Testimonials SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Law Office of James Maus",
-    "url": "https://jamesmauslaw.com",
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Arreona R."
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "Mr. Maus represented me in a child custody case where I honestly felt like I didn't have a chance, but he gave me the hope and voice I needed. He was incredibly passionate about his work, took time to explain every step of the process, and made sure I always knew what to expect.",
-        "datePublished": "2025"
-      },
-      {
-        "@type": "Review", 
-        "author": {
-          "@type": "Person",
-          "name": "Heather E."
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "I've had several lawyers since being divorced and by far he's the most caring and knowledgeable. He has Supreme Court & trial defense experience so it goes without saying that he's willing to go to bat for his clients.",
-        "datePublished": "2024"
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person", 
-          "name": "Jason L."
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "From the start, he shared his thought process and reasoning for advice he gave me, in depth. He cared. James was able to illuminate many aspects that you don't necessarily think about when going through something as difficult as a divorce with 3 children.",
-        "datePublished": "2024"
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "11",
-      "bestRating": "5",
-      "worstRating": "5"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "James Maus",
-      "jobTitle": "Attorney at Law"
-    },
-    "sameAs": [
-      "https://jamesmauslaw.com"
-    ]
-  }
   </script>
 </body>
 </html>
