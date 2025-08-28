@@ -221,7 +221,7 @@
       }
       
       /* Hide brand text on tiny screens */
-      .brand span { display: none; }
+      .brand > div { display: none; }
       
       /* Compact hero */
       .page-hero .container { padding: 1.5rem 0; }
@@ -284,7 +284,10 @@
     <div class="container nav" role="navigation" aria-label="Primary">
       <div class="brand">
         <img src="mauslogo.png" alt="James Maus Law Firm Logo" style="height:60px;">
-        <span>James Maus, Attorney at Law</span>
+        <div>
+          <div>James Maus</div>
+          <div style="font-size: 0.85em; font-weight: 400;">Attorney at Law</div>
+        </div>
       </div>
       <nav>
         <ul>
