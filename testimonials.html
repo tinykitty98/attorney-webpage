@@ -40,11 +40,86 @@
     .topbar .contact-buttons { display: flex; gap: 0.75rem; align-items: center; }
 
     header { background: #fff; position: sticky; top: 0; z-index: 20; box-shadow: 0 2px 10px var(--ring); }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; position: relative; }
     .brand { display: flex; gap: 0.75rem; align-items: center; font-weight: 700; letter-spacing: 0.3px; }
     nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
     nav a { text-decoration: none; color: var(--ink); font-weight: 600; transition: color 0.2s; }
     nav a:hover { color: var(--accent-2); }
+
+    /* Mobile Menu */
+    .mobile-menu-btn { 
+      display: none; 
+      background: none; 
+      border: none; 
+      font-size: 1.8rem; 
+      cursor: pointer; 
+      color: var(--ink);
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    
+    .mobile-menu-btn:hover {
+      background-color: #f0f3f7;
+    }
+    
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #e6ebf1;
+      border-top: none;
+      box-shadow: 0 4px 12px var(--ring);
+      z-index: 30;
+      border-radius: 0 0 12px 12px;
+    }
+    
+    .mobile-nav.active { 
+      display: block; 
+      animation: slideDown 0.2s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .mobile-nav ul {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0;
+    }
+    
+    .mobile-nav li {
+      border-bottom: 1px solid #f0f3f7;
+    }
+    
+    .mobile-nav li:last-child {
+      border-bottom: none;
+    }
+    
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      font-size: 1.1rem;
+    }
+    
+    .mobile-nav a:hover {
+      background: #f0f3f7;
+      color: var(--accent-2);
+      transform: translateX(5px);
+    }
 
     .page-hero { 
       background: linear-gradient(rgba(14, 27, 42, 0.7), rgba(14, 27, 42, 0.7)), url('cincinnati-daytime-skyline.jpg');
@@ -79,18 +154,6 @@
       margin-bottom: 1.5rem;
       width: 100%;
       display: inline-block;
-    }
-
-    @media (max-width: 900px) {
-      .testimonials-grid {
-        columns: 2;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .testimonials-grid {
-        columns: 1;
-      }
     }
 
     .testimonial-content {
@@ -141,47 +204,150 @@
     .cta { display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; background: #fff; color: var(--accent-2); text-decoration: none; font-weight: 600; margin: 0 0.5rem; }
     .cta-text { display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; margin: 0 0.5rem; }
 
-    .stats-section {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border: 1px solid #dee2e6;
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--accent-2);
-      display: block;
-    }
-
-    .stat-label {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 0.25rem;
-    }
-
     footer { background: #0c1420; color: #cdd6e1; padding: 2rem 0; margin-top: 2rem; }
     footer a { color: #cdd6e1; }
     .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
 
+    /* Mobile optimizations - desktop stays exactly the same */
+    @media (max-width: 900px) {
+      .testimonials-grid {
+        columns: 2;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      /* More compact hero */
+      .page-hero .container { padding: 2rem 0; }
+      .page-hero h1 { font-size: 1.9rem; line-height: 1.2; }
+      .page-hero p { 
+        font-size: 0.95rem; 
+        max-width: none; 
+        padding: 0 1rem;
+      }
+    }
+
     @media (max-width: 680px) {
-      nav ul { display: none; }
+      /* Mobile navigation */
+      .nav > nav > ul { display: none; }
+      .mobile-menu-btn { display: block; }
       .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
-      .testimonials-grid { grid-template-columns: 1fr; }
+      
+      /* Single column testimonials */
+      .testimonials-grid {
+        columns: 1 !important;
+      }
+      
+      /* More compact testimonials */
+      .testimonial {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      
+      .testimonial-content {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      
+      .quote-mark {
+        font-size: 2.5rem;
+        top: -5px;
+        left: 15px;
+      }
+      
+      /* Compact CTA section */
+      .cta-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+      
+      .cta-section h3 {
+        font-size: 1.2rem;
+      }
+      
+      /* Stack CTA buttons */
+      .cta, .cta-text {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 200px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      /* Very compact for small phones */
+      .topbar { font-size: 0.8rem; }
+      .topbar .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+      
+      /* Show brand text on mobile on one line */
+      .brand span {
+        display: none;
+      }
+      
+      .brand::after {
+        content: "James Maus, Attorney at Law";
+        font-size: 0.85rem;
+      }
+      
+      /* Compact hero */
+      .page-hero .container { padding: 1.5rem 0; }
+      .page-hero h1 { font-size: 1.6rem; }
+      .page-hero p { font-size: 0.9rem; }
+      
+      /* Compact sections */
+      section { padding: 2rem 0; }
+      .section-title { font-size: 1.4rem; }
+      
+      /* Very compact testimonials */
+      .testimonial {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+      
+      .testimonial-content {
+        font-size: 0.9rem;
+        /* Truncate very long testimonials on mobile */
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      
+      .quote-mark {
+        font-size: 2rem;
+        top: -2px;
+        left: 10px;
+      }
+      
+      /* Compact CTA */
+      .cta-section {
+        padding: 1.25rem;
+      }
+      
+      .cta, .cta-text {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      /* Extra compact for very narrow screens */
+      .page-hero h1 { font-size: 1.4rem; }
+      .page-hero p { font-size: 0.85rem; }
+      
+      .testimonial { padding: 0.75rem; }
+      .testimonial-content { 
+        font-size: 0.85rem;
+        -webkit-line-clamp: 6; /* Show even less on tiny screens */
+      }
+      
+      .cta, .cta-text {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
@@ -199,7 +365,7 @@
   <header>
     <div class="container nav" role="navigation" aria-label="Primary">
       <div class="brand">
-        <img src="mauslogo.png" alt="Law Firm Logo" style="height:60px;">
+        <img src="mauslogo.png" alt="James Maus Law Firm Logo" style="height:60px;">
         <span>James Maus, Attorney at Law</span>
       </div>
       <nav>
@@ -210,6 +376,16 @@
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <div class="mobile-nav" id="mobileNav">
+          <ul>
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="practice-areas.html" onclick="closeMobileMenu()">Practice Areas</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="testimonials.html" onclick="closeMobileMenu()">Testimonials</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -230,7 +406,7 @@
           <div class="testimonial">
             <div class="quote-mark">"</div>
             <div class="testimonial-content">
-              "Mr. Maus represented me in a child custody case where I honestly felt like I didn’t have a chance, but he gave me the hope and voice I needed. He was incredibly passionate about his work, took time to explain every step of the process, and made sure I always knew what to expect. His communication was clear, consistent, and honest. In addition to being a great attorney, he’s a genuinely good person who truly cares. I’m so grateful for everything he did for me and my family. Thank you so much you don’t know how much this meant to me."
+              "Mr. Maus represented me in a child custody case where I honestly felt like I didn't have a chance, but he gave me the hope and voice I needed. He was incredibly passionate about his work, took time to explain every step of the process, and made sure I always knew what to expect. His communication was clear, consistent, and honest. In addition to being a great attorney, he's a genuinely good person who truly cares. I'm so grateful for everything he did for me and my family. Thank you so much you don't know how much this meant to me."
             </div>
             <div class="testimonial-author">
               <span>Arreona R.</span>
@@ -265,7 +441,7 @@
             <div class="testimonial-content">
               "Mr. James Maus is a wonderful, loyal person and an excellent, caring and very professional lawyer. Words cannot express how grateful I am for all you have done.
 I really appreciate the support you have given me during my divorce process.
-I’ll recommend anyone."
+I'll recommend anyone."
             </div>
             <div class="testimonial-author">
               <span>Jacky A.</span>
@@ -384,6 +560,115 @@ I’ll recommend anyone."
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    
+    // Mobile menu functionality with improved accessibility
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      const isOpen = mobileNav.classList.contains('active');
+      
+      if (isOpen) {
+        mobileNav.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mobileNav.classList.add('active');
+        menuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+    
+    function closeMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      mobileNav.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+        mobileNav.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+  </script>
+
+  <!-- Enhanced Structured Data for Testimonials SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Law Office of James Maus",
+    "url": "https://jamesmauslaw.com",
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Arreona R."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Mr. Maus represented me in a child custody case where I honestly felt like I didn't have a chance, but he gave me the hope and voice I needed. He was incredibly passionate about his work, took time to explain every step of the process, and made sure I always knew what to expect.",
+        "datePublished": "2025"
+      },
+      {
+        "@type": "Review", 
+        "author": {
+          "@type": "Person",
+          "name": "Heather E."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "I've had several lawyers since being divorced and by far he's the most caring and knowledgeable. He has Supreme Court & trial defense experience so it goes without saying that he's willing to go to bat for his clients.",
+        "datePublished": "2024"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person", 
+          "name": "Jason L."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "From the start, he shared his thought process and reasoning for advice he gave me, in depth. He cared. James was able to illuminate many aspects that you don't necessarily think about when going through something as difficult as a divorce with 3 children.",
+        "datePublished": "2024"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "11",
+      "bestRating": "5",
+      "worstRating": "5"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "James Maus",
+      "jobTitle": "Attorney at Law"
+    },
+    "sameAs": [
+      "https://jamesmauslaw.com"
+    ]
+  }
   </script>
 </body>
 </html>
