@@ -121,6 +121,11 @@
       <image:caption>Mt. Adams, Cincinnati, OH captured by James Maus, Attorney at Law</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mt-adams2.png</image:loc>
+      <image:title>Mt. Adams in Cincinnati, OH</image:title>
+      <image:caption>Mt. Adams, Cincinnati, OH captured by James Maus, Attorney at Law</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://jamesmauslaw.com/images/james-library.jpg</image:loc>
       <image:title>Meet James Maus</image:title>
       <image:caption>James Maus, your trusted attorney</image:caption>
@@ -128,3 +133,4 @@
   </url>
 
 </urlset>
+
