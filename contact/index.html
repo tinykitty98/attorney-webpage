@@ -7,23 +7,97 @@
   <meta name="description" content="Contact James Maus for a free consultation. Located at 810 Sycamore Street, Cincinnati, OH. Call or text (915) 203-6067." />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicons/android-chrome-512x512.png">
 
   <!-- Structured Data for Logo -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "url": "https://jamesmauslaw.com/contact",
-    "logo": "https://jamesmauslaw.com/mauslogo.png",
-    "image": "https://jamesmauslaw.com/mauslogo2.png",
-    "name": "Contact | James Maus Law"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "James Maus Law",
+      "url": "https://jamesmauslaw.com/contact",
+      "logo": [
+        "https://jamesmauslaw.com/images/mauslogo.png",
+        "https://jamesmauslaw.com/images/mauslogo2.png"
+      ],
+      "image": [
+        "https://jamesmauslaw.com/images/mauslogo.png",
+        "https://jamesmauslaw.com/images/mauslogo2.png",
+        "https://jamesmauslaw.com/images/headshot.jpg",
+        "https://jamesmauslaw.com/images/james-library.jpg"
+      ],
+      "creator": {
+        "@type": "Person",
+        "name": "Anna Maus",
+        "jobTitle": "Website Designer",
+        "url": "mailto:anna.maus@utah.edu"
+      },
+      "priceRange": "Free Consultation / Flexible Rates"
+    },
+    {
+      "@type": "Person",
+      "name": "James Maus",
+      "jobTitle": "Attorney at Law",
+      "image": "https://jamesmauslaw.com/images/headshot.jpg",
+      "url": "https://jamesmauslaw.com",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "James Maus Law",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "810 Sycamore Street",
+          "addressLocality": "Cincinnati",
+          "addressRegion": "OH",
+          "postalCode": "45202",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-915-203-6067",
+        "email": "attyjamesmaus@aol.com"
+      },
+      "alumniOf": [
+        {"@type": "EducationalOrganization","name": "William Mitchell College of Law","location": "St. Paul, MN"},
+        {"@type": "EducationalOrganization","name": "Winona State University","location": "Minnesota"},
+        {"@type": "EducationalOrganization","name": "Fisher Catholic High School","location": "Lancaster, Ohio"}
+      ],
+      "memberOf": [
+        {"@type": "Organization","name": "Ohio State Bar"},
+        {"@type": "Organization","name": "Texas State Bar"},
+        {"@type": "Organization","name": "U.S. District Court for the Southern District of Ohio"}
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Attorney",
+        "occupationLocation": {"@type": "City","name": "Cincinnati, OH"},
+        "skills": ["Criminal Defense","Family Law","Personal Injury","Medical Malpractice","Employment Law","Civil Rights"]
+      },
+      "award": [
+        "Multi-million-dollar verdicts",
+        "Not guilty verdicts in state, federal, and military courts",
+        "Six-figure civil rights settlement against Cincinnati Police"
+      ],
+      "knowsAbout": [
+        "Court-martial defense",
+        "Federal criminal defense", 
+        "Appellate advocacy",
+        "Military justice",
+        "Life sentence appeals",
+        "Civil rights litigation"
+      ],
+      "colleague": [
+        {"@type": "Person","name": "Tamara Pavlik","jobTitle": "Nurse Practitioner","description": "Medical expert for malpractice and personal injury cases"},
+        {"@type": "Person","name": "Lydia Czanik","jobTitle": "Human Resources Specialist","description": "Employment law and HR expertise"}
+      ],
+      "sameAs": ["https://jamesmauslaw.com"]
+      }
+    ]
   }
   </script>
 
@@ -145,7 +219,7 @@
 
     /* Hero section formatted like other pages */
     .page-hero { 
-      background-image: linear-gradient(rgba(14, 27, 42, 0.7), rgba(14, 27, 42, 0.7)), url('mt-adams.jpg');
+      background-image: linear-gradient(rgba(14, 27, 42, 0.7), rgba(14, 27, 42, 0.7)), url('images/mt-adams.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -390,7 +464,7 @@
   <header>
     <div class="container nav" role="navigation" aria-label="Primary">
       <div class="brand">
-        <img src="mauslogo.png" alt="James Maus Law Firm Logo" style="height:60px;">
+        <img src="images/mauslogo.png" alt="James Maus Law Firm Logo" style="height:60px;">
         <span>James Maus, Attorney at Law</span>
       </div>
       <nav>
@@ -404,11 +478,11 @@
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
         <div class="mobile-nav" id="mobileNav">
           <ul>
-            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
-            <li><a href="practice-areas.html" onclick="closeMobileMenu()">Practice Areas</a></li>
-            <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
-            <li><a href="testimonials.html" onclick="closeMobileMenu()">Testimonials</a></li>
-            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+            <li><a href="/" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="/practice-areas/" onclick="closeMobileMenu()">Practice Areas</a></li>
+            <li><a href="/about/" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="/testimonials/" onclick="closeMobileMenu()">Testimonials</a></li>
+            <li><a href="/contact/" onclick="closeMobileMenu()">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -468,7 +542,7 @@
             
             <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e9eef4;">
               <div style="display: flex; align-items: center; gap: 1rem;">
-                <img src="james-library.jpg" alt="James Maus Attorney" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <img src="images/james-library.jpg" alt="James Maus Attorney" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 <div>
                   <h3 style="margin: 0 0 0.25rem; color: var(--accent-2); font-size: 1.1rem;">Meet James</h3>
                   <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">James Maus, ready to help with your legal needs</p>
@@ -581,10 +655,10 @@
       <div style="display:flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center;">
         <div>&copy; <span id="y"></span> Law Office of James Maus. All rights reserved.</div>
         <div>
-          <a href="index.html">Home</a> | 
-          <a href="practice-areas.html">Practice Areas</a> | 
-          <a href="about.html">About</a> |
-          <a href="testimonials.html">Testimonials</a>
+          <a href="/">Home</a> | 
+          <a href="/about/">About</a> | 
+          <a href="/testimonials/">Testimonials</a> |
+          <a href="/contact/">Contact</a>
         </div>
       </div>
       <div class="fineprint">
@@ -637,105 +711,3 @@
       }
     });
   </script>
-
-  <!-- Enhanced Structured Data for Local Business SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Law Office of James Maus",
-    "alternateName": "James Maus Attorney at Law",
-    "image": [
-      "https://jamesmauslaw.com/mauslogo.png",
-      "https://jamesmauslaw.com/mauslogo2.png",
-      "https://jamesmauslaw.com/headshot.jpg",
-      "https://jamesmauslaw.com/james-library.jpg"
-    ],
-    "logo": "https://jamesmauslaw.com/mauslogo.png",
-    "url": "https://jamesmauslaw.com",
-    "telephone": "+1-915-203-6067",
-    "email": "attyjamesmaus@aol.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "810 Sycamore Street",
-      "addressLocality": "Cincinnati",
-      "addressRegion": "OH",
-      "postalCode": "45202",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "39.1031",
-      "longitude": "-84.5120"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Cincinnati",
-        "sameAs": "https://en.wikipedia.org/wiki/Cincinnati"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Hamilton County"
-      },
-      {
-        "@type": "AdministrativeArea", 
-        "name": "Butler County"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Warren County"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Clermont County"
-      },
-      {
-        "@type": "State",
-        "name": "Northern Kentucky"
-      },
-      {
-        "@type": "State", 
-        "name": "Southeastern Indiana"
-      }
-    ],
-    "founder": {
-      "@type": "Person",
-      "name": "James Maus",
-      "jobTitle": "Attorney at Law",
-      "image": "https://jamesmauslaw.com/headshot.jpg",
-      "alumniOf": [
-        {
-          "@type": "EducationalOrganization",
-          "name": "William Mitchell College of Law"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "name": "Winona State University"
-        }
-      ],
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Ohio State Bar"
-      }
-    },
-    "openingHours": [
-      "Mo-Fr 09:00-17:00"
-    ],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "17:00"
-      }
-    ],
-    "priceRange": "Free Consultation Available",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Legal Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type
