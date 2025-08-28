@@ -188,15 +188,12 @@
       color: #e9eef4;
     }
     
-    /* Mobile video optimization */
+    /* Mobile video optimization - keep background image visible */
     @media (max-width: 768px) {
       .hero-video {
         display: none; /* Use static background on mobile for performance */
       }
-      .hero {
-        background: linear-gradient(135deg, var(--accent-2), var(--accent)),
-                    url('cincinnati-sunset-fallback.jpg') center/cover;
-      }
+      /* This gets overridden by the more specific mobile styles below */
     }
     .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
     .btn-outline { border: 1px solid var(--accent-2); color: var(--accent-2); padding: 0.6rem 1rem; border-radius: 999px; text-decoration: none; }
@@ -223,22 +220,7 @@
     .footer a { color: #cdd6e1; }
     .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
 
-    /* Small screens */
-    @media (max-width: 680px) {
-      .nav > nav > ul { display: none; }
-      .mobile-menu-btn { display: block; }
-      .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
-      .contact-actions { flex-direction: column; align-items: center; }
-      .hero-actions { flex-direction: column; align-items: stretch; }
-      .hero-actions a { text-align: center; }
-    }
-    
-    @media (max-width: 480px) {
-      .hero .container { padding: 2.5rem 0; }
-      .hero h1 { font-size: 1.8rem; }
-      .brand span { font-size: 0.9rem; }
-      .topbar { font-size: 0.85rem; }
-    }
+
   </style>
 </head>
 <body>
