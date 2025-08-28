@@ -15,17 +15,81 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicons/android-chrome-512x512.png">
 
-  <!-- Structured Data for Logo -->
+  <!-- Structured Data for About Page -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "url": "https://jamesmauslaw.com/about",
-    "logo": "https://jamesmauslaw.com/mauslogo.png",
-    "image": "https://jamesmauslaw.com/mauslogo2.png",
-    "name": "About | James Maus Law"
-  }
-  </script>
+    "@graph": [
+  {
+        "@type": "Organization",
+        "name": "Law Office of James Maus",
+        "url": "https://jamesmauslaw.com/about",
+        "logo": "https://jamesmauslaw.com/mauslogo.png",
+        "image": [
+  "https://jamesmauslaw.com/mauslogo.png",
+  "https://jamesmauslaw.com/mauslogo2.png",
+  "https://jamesmauslaw.com/headshot.jpg",
+  "https://jamesmauslaw.com/james-library.jpg"
+  ]
+  },
+  {
+        "@type": "Person",
+        "name": "James Maus",
+        "jobTitle": "Attorney at Law",
+        "image": "https://jamesmauslaw.com/headshot.jpg",
+        "url": "https://jamesmauslaw.com",
+        "worksFor": {
+        "@type": "Organization",
+        "name": "Law Office of James Maus",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "810 Sycamore Street",
+          "addressLocality": "Cincinnati",
+          "addressRegion": "OH",
+          "postalCode": "45202",
+          "addressCountry": "US"
+    },
+        "telephone": "+1-915-203-6067",
+        "email": "attyjamesmaus@aol.com"
+    },
+    "alumniOf": [
+        {"@type": "EducationalOrganization","name": "William Mitchell College of Law","location": "St. Paul, MN"},
+        {"@type": "EducationalOrganization","name": "Winona State University","location": "Minnesota"},
+        {"@type": "EducationalOrganization","name": "Fisher Catholic High School","location": "Lancaster, Ohio"}
+    ],
+    "memberOf": [
+        {"@type": "Organization","name": "Ohio State Bar"},
+        {"@type": "Organization","name": "Texas State Bar"},
+        {"@type": "Organization","name": "U.S. District Court for the Southern District of Ohio"}
+    ],
+    "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Attorney",
+        "occupationLocation": {"@type": "City","name": "Cincinnati, OH"},
+        "skills": ["Criminal Defense","Family Law","Personal Injury","Medical Malpractice","Employment Law","Civil Rights"]
+    },
+    "award": [
+        "Multi-million-dollar verdicts",
+        "Not guilty verdicts in state, federal, and military courts",
+        "Six-figure civil rights settlement against Cincinnati Police"
+    ],
+    "knowsAbout": [
+        "Court-martial defense",
+        "Federal criminal defense",
+        "Appellate advocacy",
+        "Military justice",
+        "Life sentence appeals",
+        "Civil rights litigation"
+    ],
+    "colleague": [
+        {"@type": "Person","name": "Tamara Pavlik","jobTitle": "Nurse Practitioner","description": "Medical expert for malpractice and personal injury cases"},
+        {"@type": "Person","name": "Lydia Czanik","jobTitle": "Human Resources Specialist","description": "Employment law and HR expertise"}
+    ],
+    "sameAs": ["https://jamesmauslaw.com"]
+    }
+  ]
+}
+</script>
 
   <style>
     :root {
@@ -374,11 +438,11 @@
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
         <div class="mobile-nav" id="mobileNav">
           <ul>
-            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
-            <li><a href="practice-areas.html" onclick="closeMobileMenu()">Practice Areas</a></li>
-            <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
-            <li><a href="testimonials.html" onclick="closeMobileMenu()">Testimonials</a></li>
-            <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+            <li><a href="/" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="/practice-areas/" onclick="closeMobileMenu()">Practice Areas</a></li>
+            <li><a href="/about/" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="/testimonials/" onclick="closeMobileMenu()">Testimonials</a></li>
+            <li><a href="/contact/" onclick="closeMobileMenu()">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -529,10 +593,10 @@
       <div style="display:flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center;">
         <div>&copy; <span id="y"></span> Law Office of James Maus. All rights reserved.</div>
         <div>
-          <a href="index.html">Home</a> | 
-          <a href="practice-areas.html">Practice Areas</a> | 
-          <a href="testimonials.html">Testimonials</a> |
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a> | 
+          <a href="/about/">About</a> | 
+          <a href="/testimonials/">Testimonials</a> |
+          <a href="/contact/">Contact</a>
         </div>
       </div>
       <div class="fineprint">
@@ -636,107 +700,5 @@
     });
   </script>
 
-  <!-- Enhanced Structured Data for About Page SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "James Maus",
-    "jobTitle": "Attorney at Law",
-    "image": "https://jamesmauslaw.com/headshot.jpg",
-    "url": "https://jamesmauslaw.com",
-    "worksFor": {
-      "@type": "LegalService",
-      "name": "Law Office of James Maus",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "810 Sycamore Street",
-        "addressLocality": "Cincinnati",
-        "addressRegion": "OH",
-        "postalCode": "45202",
-        "addressCountry": "US"
-      },
-      "telephone": "+1-915-203-6067",
-      "email": "attyjamesmaus@aol.com"
-    },
-    "alumniOf": [
-      {
-        "@type": "EducationalOrganization",
-        "name": "William Mitchell College of Law",
-        "location": "St. Paul, MN"
-      },
-      {
-        "@type": "EducationalOrganization", 
-        "name": "Winona State University",
-        "location": "Minnesota"
-      },
-      {
-        "@type": "EducationalOrganization",
-        "name": "Fisher Catholic High School",
-        "location": "Lancaster, Ohio"
-      }
-    ],
-    "memberOf": [
-      {
-        "@type": "Organization",
-        "name": "Ohio State Bar"
-      },
-      {
-        "@type": "Organization", 
-        "name": "Texas State Bar"
-      },
-      {
-        "@type": "Organization",
-        "name": "U.S. District Court for the Southern District of Ohio"
-      }
-    ],
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Attorney",
-      "occupationLocation": {
-        "@type": "City",
-        "name": "Cincinnati, OH"
-      },
-      "skills": [
-        "Criminal Defense",
-        "Family Law", 
-        "Personal Injury",
-        "Medical Malpractice",
-        "Employment Law",
-        "Civil Rights"
-      ]
-    },
-    "award": [
-      "Multi-million-dollar verdicts",
-      "Not guilty verdicts in state, federal, and military courts",
-      "Six-figure civil rights settlement against Cincinnati Police"
-    ],
-    "knowsAbout": [
-      "Court-martial defense",
-      "Federal criminal defense", 
-      "Appellate advocacy",
-      "Military justice",
-      "Life sentence appeals",
-      "Civil rights litigation"
-    ],
-    "colleague": [
-      {
-        "@type": "Person",
-        "name": "Tamara Pavlik",
-        "jobTitle": "Nurse Practitioner",
-        "description": "Medical expert for malpractice and personal injury cases"
-      },
-      {
-        "@type": "Person",
-        "name": "Lydia Czanik", 
-        "jobTitle": "Human Resources Specialist",
-        "description": "Employment law and HR expertise"
-      }
-    ],
-    "sameAs": [
-      "https://jamesmauslaw.com"
-    ]
-  }
-  </script>
 </body>
 </html>
