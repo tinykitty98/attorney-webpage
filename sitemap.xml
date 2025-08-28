@@ -1,39 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-  <!-- Homepage -->
+  <!-- Home Page -->
   <url>
     <loc>https://jamesmauslaw.com/</loc>
-    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-28T10:00:00+00:00</lastmod>
     <priority>1.00</priority>
+    <!-- Images on Home -->
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mauslogo.png</image:loc>
+      <image:title>James Maus Law</image:title>
+      <image:caption>James Maus Law Logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/cincinnati-sunset-fallback.jpg</image:loc>
+      <image:title>Cincinnati Sunset</image:title>
+      <image:caption>A Cincinnati sunset captured by James Maus, Attorney at Law</image:caption>
+    </image:image>
+    <!-- Video on Home page -->
+    <video:video>
+      <video:thumbnail_loc>https://jamesmauslaw.com/videos/cincinnati-sunset-thumbnail.png</video:thumbnail_loc>
+      <video:title>Cincinnati Sunset</video:title>
+      <video:description>Enjoy a beautiful sunset in Cincinnati, OH, captured by James Maus, Attorney at Law.</video:description>
+      <video:content_loc>https://jamesmauslaw.com/videos/cincinnati-sunset.mp4</video:content_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2025-08-28T01:30:00+00:00</video:publication_date>
+    </video:video>
   </url>
 
   <!-- Practice Areas -->
   <url>
     <loc>https://jamesmauslaw.com/practice-areas/</loc>
-    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-28T10:00:00+00:00</lastmod>
     <priority>0.80</priority>
+    <!-- Images on Practice Areas -->
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mauslogo.png</image:loc>
+      <image:title>James Maus Law</image:title>
+      <image:caption>James Maus Law Logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/cincinnati-skyline.png</image:loc>
+      <image:title>Cincinnati Skyline</image:title>
+      <image:caption>The Cincinnati Skyline captured by James Maus, Attorney at Law</image:caption>
+    </image:image>
   </url>
 
   <!-- About -->
   <url>
     <loc>https://jamesmauslaw.com/about/</loc>
-    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-28T10:00:00+00:00</lastmod>
     <priority>0.80</priority>
+    <!-- Images on About -->
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mauslogo.png</image:loc>
+      <image:title>James Maus Law</image:title>
+      <image:caption>James Maus Law Logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/ohio-river.jpeg</image:loc>
+      <image:title>The Ohio River</image:title>
+      <image:caption>The Ohio River captured by James Maus, Attorney at Law</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/headshot.jpg</image:loc>
+      <image:title>James Maus Headshot</image:title>
+      <image:caption>Professional headshot of James Maus, Attorney at Law</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mauslogo2.png</image:loc>
+      <image:title>James Maus Law Logo</image:title>
+      <image:caption>James Maus, Attorney at Law</image:caption>
+    </image:image>
+    <!-- Video on About -->
+    <video:video>
+      <video:thumbnail_loc>https://jamesmauslaw.com/videos/ohio-river-thumbnail.png</video:thumbnail_loc>
+      <video:title>Ohio River</video:title>
+      <video:description>The Ohio River, Cincinnati, OH, captured by James Maus Law.</video:description>
+      <video:content_loc>https://jamesmauslaw.com/videos/ohio-river.mp4</video:content_loc>
+      <video:duration>2</video:duration>
+      <video:publication_date>2025-08-28T01:30:00+00:00</video:publication_date>
+    </video:video>
   </url>
 
   <!-- Testimonials -->
   <url>
     <loc>https://jamesmauslaw.com/testimonials/</loc>
-    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-28T10:00:00+00:00</lastmod>
     <priority>0.80</priority>
+    <!-- Images on Testimonials -->
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mauslogo.png</image:loc>
+      <image:title>James Maus Law</image:title>
+      <image:caption>James Maus Law Logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/cincinnati-daytime-skyline.jpg</image:loc>
+      <image:title>Cincinnati, OH</image:title>
+      <image:caption>Cincinnati, OH, captured by James Maus, Attorney at Law</image:caption>
+    </image:image>
   </url>
 
   <!-- Contact -->
   <url>
     <loc>https://jamesmauslaw.com/contact/</loc>
-    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-28T10:00:00+00:00</lastmod>
     <priority>0.80</priority>
+    <!-- Images on Contact -->
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mauslogo.png</image:loc>
+      <image:title>James Maus Law</image:title>
+      <image:caption>James Maus Law Logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/mt-adams.jpg</image:loc>
+      <image:title>Mt. Adams in Cincinnati, OH</image:title>
+      <image:caption>Mt. Adams, Cincinnati, OH captured by James Maus, Attorney at Law</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesmauslaw.com/images/james-library.jpg</image:loc>
+      <image:title>Meet James Maus</image:title>
+      <image:caption>James Maus, your trusted attorney</image:caption>
+    </image:image>
   </url>
 
 </urlset>
