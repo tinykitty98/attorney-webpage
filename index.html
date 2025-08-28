@@ -188,13 +188,6 @@
       color: #e9eef4;
     }
     
-    /* Mobile video optimization - keep background image visible */
-    @media (max-width: 768px) {
-      .hero-video {
-        display: none; /* Use static background on mobile for performance */
-      }
-      /* This gets overridden by the more specific mobile styles below */
-    }
     .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
     .btn-outline { border: 1px solid var(--accent-2); color: var(--accent-2); padding: 0.6rem 1rem; border-radius: 999px; text-decoration: none; }
 
@@ -220,7 +213,88 @@
     .footer a { color: #cdd6e1; }
     .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
 
-
+    /* Mobile optimizations - desktop stays exactly the same */
+    @media (max-width: 768px) {
+      /* Hide video on mobile, use fallback image */
+      .hero-video { display: none; }
+      .hero {
+        background: linear-gradient(rgba(14, 27, 42, 0.7), rgba(198, 161, 100, 0.3)),
+                    url('cincinnati-sunset-fallback.jpg') center/cover;
+        min-height: 60vh;
+      }
+      
+      /* More compact hero */
+      .hero .container { padding: 2rem 0; }
+      .hero h1 { font-size: 1.9rem; line-height: 1.2; }
+      .hero p { font-size: 0.95rem; margin-bottom: 0.75rem; }
+    }
+    
+    @media (max-width: 680px) {
+      /* Mobile navigation */
+      .nav > nav > ul { display: none; }
+      .mobile-menu-btn { display: block; }
+      .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
+      
+      /* Stack practice areas vertically */
+      .grid[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      
+      /* Stack features vertically */  
+      .features {
+        grid-template-columns: 1fr !important;
+      }
+      
+      /* Mobile-friendly buttons */
+      .hero-actions { 
+        flex-direction: column; 
+        align-items: stretch; 
+        gap: 0.5rem;
+      }
+      .hero-actions a { text-align: center; }
+      
+      .contact-actions { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 0.75rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      /* Very compact for small phones */
+      .topbar { font-size: 0.8rem; }
+      .topbar .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+      
+      /* Hide brand text on tiny screens */
+      .brand span { display: none; }
+      
+      /* Compact hero */
+      .hero { min-height: 50vh; }
+      .hero .container { padding: 1.5rem 0; }
+      .hero h1 { font-size: 1.6rem; }
+      .eyebrow { font-size: 0.85rem; margin-bottom: 0.5rem; }
+      
+      /* Compact sections */
+      section { padding: 2rem 0; }
+      .section-title { font-size: 1.4rem; }
+      .card { padding: 1rem; }
+      
+      /* Hide licensing text on mobile to reduce clutter */
+      .hero p[style*="font-weight:600"] { display: none; }
+    }
+    
+    @media (max-width: 360px) {
+      /* Extra compact for very narrow screens */
+      .hero h1 { font-size: 1.4rem; }
+      .hero p { font-size: 0.9rem; }
+      .card { padding: 0.75rem; }
+      .eyebrow { display: none; } /* Remove on tiny screens */
+    }
   </style>
 </head>
 <body>
@@ -337,7 +411,7 @@
     <section aria-labelledby="why-choose-title">
       <div class="container">
         <h2 class="section-title" id="why-choose-title">Why Choose James Maus?</h2>
-        <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="grid features" style="grid-template-columns: repeat(4, 1fr);">
           <div class="feature card">
             <h3>Proven Track Record</h3>
             <p>Multi-million-dollar verdicts, life-sentence reversals, and major settlements across state, federal, and military courts.</p>
