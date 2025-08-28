@@ -298,13 +298,16 @@
 
     /* Mobile optimizations - desktop stays exactly the same */
     @media (max-width: 768px) {
-      /* Hide video on mobile, use fallback */
       .hero-video { display: none; }
       .page-hero {
-        background: linear-gradient(rgba(14, 27, 42, 0.7), rgba(198, 161, 100, 0.3)),
-                    url('images/ohio-river.jpeg') center/cover;
-        min-height: 50vh;
+      min-height: 50vh;
+      background-image: linear-gradient(rgba(14,27,42,0.7), rgba(198,161,100,0.3)),
+                      url('images/ohio-river.jpeg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       }
+     }
       
       /* More compact hero */
       .page-hero .container { padding: 2rem 0; }
