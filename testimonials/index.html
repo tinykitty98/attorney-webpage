@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Testimonials | James Maus, Attorney at Law | Cincinnati, OH</title>
+  <meta name="description" content="Read what clients say about James Maus. Proven results in family law, criminal defense, personal injury, and more. Cincinnati attorney with excellent reviews." />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+
+  <!-- Structured Data for Logo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://jamesmauslaw.com/testimonials",
+    "logo": "https://jamesmauslaw.com/mauslogo.png",
+    "image": "https://jamesmauslaw.com/mauslogo2.png",
+    "name": "Testimonials | James Maus Law"
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #0e1b2a;
+      --ink-2: #203549;
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --accent: #c6a164;
+      --accent-2: #345d7e;
+      --muted: #6b7a90;
+      --ring: rgba(12, 18, 26, 0.08);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(14, 27, 42, 0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+
+    .container { width: min(1100px, 92%); margin-inline: auto; }
+    .grid { display: grid; gap: 1.25rem; }
+
+    .topbar { background: var(--ink); color: #fff; font-size: 0.95rem; }
+    .topbar .container { padding: 0.4rem 0; display: flex; justify-content: space-between; align-items: center; }
+    .topbar a { color: #fff; text-decoration: none; }
+    .topbar .contact-buttons { display: flex; gap: 0.75rem; align-items: center; }
+
+    header { background: #fff; position: sticky; top: 0; z-index: 20; box-shadow: 0 2px 10px var(--ring); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; position: relative; }
+    .brand { display: flex; gap: 0.75rem; align-items: center; font-weight: 700; letter-spacing: 0.3px; }
+    nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+    nav a { text-decoration: none; color: var(--ink); font-weight: 600; transition: color 0.2s; }
+    nav a:hover { color: var(--accent-2); }
+
+    /* Mobile Menu */
+    .mobile-menu-btn { 
+      display: none; 
+      background: none; 
+      border: none; 
+      font-size: 1.8rem; 
+      cursor: pointer; 
+      color: var(--ink);
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    
+    .mobile-menu-btn:hover {
+      background-color: #f0f3f7;
+    }
+    
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #e6ebf1;
+      border-top: none;
+      box-shadow: 0 4px 12px var(--ring);
+      z-index: 30;
+      border-radius: 0 0 12px 12px;
+    }
+    
+    .mobile-nav.active { 
+      display: block; 
+      animation: slideDown 0.2s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .mobile-nav ul {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0;
+    }
+    
+    .mobile-nav li {
+      border-bottom: 1px solid #f0f3f7;
+    }
+    
+    .mobile-nav li:last-child {
+      border-bottom: none;
+    }
+    
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      font-size: 1.1rem;
+    }
+    
+    .mobile-nav a:hover {
+      background: #f0f3f7;
+      color: var(--accent-2);
+      transform: translateX(5px);
+    }
+
+    .page-hero { 
+      background: linear-gradient(rgba(14, 27, 42, 0.7), rgba(14, 27, 42, 0.7)), url('cincinnati-daytime-skyline.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff; 
+      text-align: center; 
+    }
+    .page-hero .container { padding: 2.5rem 0; }
+    .page-hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
+    .page-hero p { color: #cdd6e1; max-width: 60ch; margin: 0 auto; }
+
+    section { padding: 2.5rem 0; }
+    .section-title { font-size: 1.6rem; margin: 0 0 1rem; }
+    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; border: 1px solid #e9eef4; }
+
+    .testimonials-grid { 
+      columns: 3;
+      column-gap: 1.5rem;
+      width: 100%;
+    }
+    
+    .testimonial {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--accent-2);
+      position: relative;
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      display: inline-block;
+    }
+
+    .testimonial-content {
+      font-style: italic;
+      color: var(--ink-2);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--accent-2);
+    }
+
+    .testimonial-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: normal;
+    }
+
+    .quote-mark {
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 3rem;
+      color: var(--accent);
+      opacity: 0.3;
+      font-family: serif;
+    }
+
+    .cta-section {
+      background: var(--accent-2);
+      color: #fff;
+      text-align: center;
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .cta-section h3 {
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+
+    .cta { display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; background: #fff; color: var(--accent-2); text-decoration: none; font-weight: 600; margin: 0 0.5rem; }
+    .cta-text { display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; margin: 0 0.5rem; }
+
+    footer { background: #0c1420; color: #cdd6e1; padding: 2rem 0; margin-top: 2rem; }
+    footer a { color: #cdd6e1; }
+    .fineprint { font-size: 0.85rem; color: #aab6c5; margin-top: 1rem; }
+
+    /* Mobile optimizations - desktop stays exactly the same */
+    @media (max-width: 900px) {
+      .testimonials-grid {
+        columns: 2;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      /* More compact hero */
+      .page-hero .container { padding: 2rem 0; }
+      .page-hero h1 { font-size: 1.9rem; line-height: 1.2; }
+      .page-hero p { 
+        font-size: 0.95rem; 
+        max-width: none; 
+        padding: 0 1rem;
+      }
+    }
+
+    @media (max-width: 680px) {
+      /* Mobile navigation */
+      .nav > nav > ul { display: none; }
+      .mobile-menu-btn { display: block; }
+      .topbar .contact-buttons { flex-direction: column; gap: 0.25rem; }
+      
+      /* Single column testimonials */
+      .testimonials-grid {
+        columns: 1 !important;
+      }
+      
+      /* More compact testimonials */
+      .testimonial {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      
+      .testimonial-content {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      
+      .quote-mark {
+        font-size: 2.5rem;
+        top: -5px;
+        left: 15px;
+      }
+      
+      /* Compact CTA section */
+      .cta-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+      
+      .cta-section h3 {
+        font-size: 1.2rem;
+      }
+      
+      /* Stack CTA buttons */
+      .cta, .cta-text {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 200px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      /* Very compact for small phones */
+      .topbar { font-size: 0.8rem; }
+      .topbar .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+      
+      /* Show brand text on mobile on one line */
+      .brand span {
+        display: none;
+      }
+      
+      .brand::after {
+        content: "James Maus, Attorney at Law";
+        font-size: 0.85rem;
+      }
+      
+      /* Compact hero */
+      .page-hero .container { padding: 1.5rem 0; }
+      .page-hero h1 { font-size: 1.6rem; }
+      .page-hero p { font-size: 0.9rem; }
+      
+      /* Compact sections */
+      section { padding: 2rem 0; }
+      .section-title { font-size: 1.4rem; }
+      
+      /* Very compact testimonials */
+      .testimonial {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+      
+      .testimonial-content {
+        font-size: 0.9rem;
+        /* Truncate very long testimonials on mobile */
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      
+      .quote-mark {
+        font-size: 2rem;
+        top: -2px;
+        left: 10px;
+      }
+      
+      /* Compact CTA */
+      .cta-section {
+        padding: 1.25rem;
+      }
+      
+      .cta, .cta-text {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      /* Extra compact for very narrow screens */
+      .page-hero h1 { font-size: 1.4rem; }
+      .page-hero p { font-size: 0.85rem; }
+      
+      .testimonial { padding: 0.75rem; }
+      .testimonial-content { 
+        font-size: 0.85rem;
+        -webkit-line-clamp: 6; /* Show even less on tiny screens */
+      }
+      
+      .cta, .cta-text {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div>Serving Cincinnati & Surrounding Regions</div>
+      <div class="contact-buttons">
+        <a href="tel:+19152036067">Call (915) 203-6067</a>
+        <a href="sms:+19152036067">Text (915) 203-6067</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <img src="mauslogo.png" alt="James Maus Law Firm Logo" style="height:60px;">
+        <span>James Maus, Attorney at Law</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/practice-areas/">Practice Areas</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/testimonials/">Testimonials</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <div class="mobile-nav" id="mobileNav">
+          <ul>
+            <li><a href="/" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="/practice-areas/" onclick="closeMobileMenu()">Practice Areas</a></li>
+            <li><a href="/about/" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="/testimonials/" onclick="closeMobileMenu()">Testimonials</a></li>
+            <li><a href="/contact/" onclick="closeMobileMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Client Testimonials</h1>
+        <p>Read what clients say about their experience working with James Maus. Real reviews from real clients who trusted us with their legal matters.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+          
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "Mr. Maus represented me in a child custody case where I honestly felt like I didn't have a chance, but he gave me the hope and voice I needed. He was incredibly passionate about his work, took time to explain every step of the process, and made sure I always knew what to expect. His communication was clear, consistent, and honest. In addition to being a great attorney, he's a genuinely good person who truly cares. I'm so grateful for everything he did for me and my family. Thank you so much you don't know how much this meant to me."
+            </div>
+            <div class="testimonial-author">
+              <span>Arreona R.</span>
+              <span class="testimonial-meta">2025</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "Mr. Maus was a GREAT attorney we communicated well and he got the job done! case dismissed!"
+            </div>
+            <div class="testimonial-author">
+              <span>Ashlee C.</span>
+              <span class="testimonial-meta">2025</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "James Maus handled a unique custody case for me and won! He was knowledgeable and always readily available for my many questions and updates. Highly recommend."
+            </div>
+            <div class="testimonial-author">
+              <span>Jennie C.</span>
+              <span class="testimonial-meta">2025</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "Mr. James Maus is a wonderful, loyal person and an excellent, caring and very professional lawyer. Words cannot express how grateful I am for all you have done.
+I really appreciate the support you have given me during my divorce process.
+I'll recommend anyone."
+            </div>
+            <div class="testimonial-author">
+              <span>Jacky A.</span>
+              <span class="testimonial-meta">2025</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "James Maus was very helpful. He made himself available and responded quickly. He helped me get through the process of my dissolution without any issues."
+            </div>
+            <div class="testimonial-author">
+              <span>Family Law Client</span>
+              <span class="testimonial-meta">2024</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "I hired Jim Maus to represent me when my ex took me back to court for a post-divorce filing concerning our children. I've had several lawyers since being divorced and by far he's the most caring and knowledgeable. He has Supreme Court & trial defense experience so it goes without saying that he's willing to go to bat for his clients. He was thorough and took the time to understand my very complex litigation history with my ex. He listened to my points and worked with me to find solutions for my desired outcome in my case. Additionally, the support staff at this firm goes above and beyond as well. God forbid I ever need a lawyer again, but if I do, I'm calling Jim Maus and his crew! Thanks for having a talented, capable, and tenacious team for those needing a fighting chance!"
+            </div>
+            <div class="testimonial-author">
+              <span>Heather E.</span>
+              <span class="testimonial-meta">2024</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "James Maus, Esq. was very helpful and supportive during my divorce. His knowledge and attention to detail made a difficult process much easier. During the divorce process, having good communication with my attorney was paramount. Mr. Maus was always responsive and kept me informed."
+            </div>
+            <div class="testimonial-author">
+              <span>Isaac G.</span>
+              <span class="testimonial-meta">2024</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "Early in 2024, whilst searching for a divorce lawyer, I came across reviews for James Maus and was convinced to at least call and talk with him. Probably one of the best decisions I've made. From the start, he shared his thought process and reasoning for advice he gave me, in depth. He cared. When dealing with legal proceedings, it's hard not to get lost. James was able to illuminate many aspects that you don't necessarily think about when going through something as difficult as a divorce with 3 children. He was prompt with his replies, and to the point so our conversing became extremely efficient which in the long run saved me countless dollars. Honestly, I can't say enough good things about my experience with him. It was truly the best I could have expected of a tough situation. Thank you James, for everything."
+            </div>
+            <div class="testimonial-author">
+              <span>Jason L.</span>
+              <span class="testimonial-meta">2024</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "James Maus was an amazing attorney we had a pretty different divorce case and he managed to make it work. He was very helpful easy to get ahold of and got back to me right away!"
+            </div>
+            <div class="testimonial-author">
+              <span>Courtney C.</span>
+              <span class="testimonial-meta">2023</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "This law firm strides in client satisfaction, I'm extremely pleased with the service and knowledge that was provided by James Maus. I'm definitely going to refer family members and friends to this law firm. Thanks again, Mr. Maus"
+            </div>
+            <div class="testimonial-author">
+              <span>Kenny S.</span>
+              <span class="testimonial-meta">2023</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="quote-mark">"</div>
+            <div class="testimonial-content">
+              "Mr. James Maus is an amazing attorney..he took my case an transformed my situation into a great out come...he is very professional...always on his game...he's very knowledgeable about the laws as well does his homework before appearing in court...I would highly recommend him to handle anyone's legal issues....as a commercial driver...so often we deal with issues most attorney's have no clue about...Mr. Jim Maus saved my license of 45 years...thank you again...."
+            </div>
+            <div class="testimonial-author">
+              <span>Commercial Driver</span>
+              <span class="testimonial-meta">2023</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cta-section">
+          <h3>Ready to Experience the Same Quality Representation?</h3>
+          <p>Join our satisfied clients. Contact James Maus today for your free consultation.</p>
+          <div style="margin-top: 1rem;">
+            <a class="cta" href="tel:+19152036067">Call (915) 203-6067</a>
+            <a class="cta-text" href="sms:+19152036067">Text (915) 203-6067</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center;">
+        <div>&copy; <span id="y"></span> Law Office of James Maus. All rights reserved.</div>
+        <div>
+          <a href="index.html">Home</a> | 
+          <a href="practice-areas.html">Practice Areas</a> | 
+          <a href="about.html">About</a> | 
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="fineprint">
+        This website is attorney advertising. | 
+        <span style="color: #8b95a6;">Website designed by <a href="mailto:anna.maus@utah.edu" style="color: #8b95a6; text-decoration: none;">Anna Elizabeth Maus</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    
+    // Mobile menu functionality with improved accessibility
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      const isOpen = mobileNav.classList.contains('active');
+      
+      if (isOpen) {
+        mobileNav.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mobileNav.classList.add('active');
+        menuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+    
+    function closeMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      mobileNav.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+        mobileNav.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+  </script>
+
+  <!-- Enhanced Structured Data for Testimonials SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Law Office of James Maus",
+    "url": "https://jamesmauslaw.com",
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Arreona R."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Mr. Maus represented me in a child custody case where I honestly felt like I didn't have a chance, but he gave me the hope and voice I needed. He was incredibly passionate about his work, took time to explain every step of the process, and made sure I always knew what to expect.",
+        "datePublished": "2025"
+      },
+      {
+        "@type": "Review", 
+        "author": {
+          "@type": "Person",
+          "name": "Heather E."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "I've had several lawyers since being divorced and by far he's the most caring and knowledgeable. He has Supreme Court & trial defense experience so it goes without saying that he's willing to go to bat for his clients.",
+        "datePublished": "2024"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person", 
+          "name": "Jason L."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "From the start, he shared his thought process and reasoning for advice he gave me, in depth. He cared. James was able to illuminate many aspects that you don't necessarily think about when going through something as difficult as a divorce with 3 children.",
+        "datePublished": "2024"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "11",
+      "bestRating": "5",
+      "worstRating": "5"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "James Maus",
+      "jobTitle": "Attorney at Law"
+    },
+    "sameAs": [
+      "https://jamesmauslaw.com"
+    ]
+  }
+  </script>
+</body>
+</html>
