@@ -18,87 +18,23 @@
   <!-- Structured Data for Contact -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "James Maus Law",
-        "url": "https://jamesmauslaw.com/contact",
-        "logo": [
-          "https://jamesmauslaw.com/images/mauslogo.png",
-          "https://jamesmauslaw.com/images/mauslogo2.png"
-        ],
-        "image": [
-          "https://jamesmauslaw.com/images/mauslogo.png",
-          "https://jamesmauslaw.com/images/mauslogo2.png",
-          "https://jamesmauslaw.com/images/headshot.jpg",
-          "https://jamesmauslaw.com/images/james-library.jpg"
-        ],
-        "creator": {
-          "@type": "Person",
-          "name": "Anna Maus",
-          "jobTitle": "Website Designer",
-          "url": "mailto:anna.maus@utah.edu"
-        },
-        "priceRange": "$"
-      },
-      {
-        "@type": "Person",
-        "name": "James Maus",
-        "jobTitle": "Attorney at Law",
-        "image": "https://jamesmauslaw.com/images/headshot.jpg",
-        "url": "https://jamesmauslaw.com",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "James Maus Law",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "810 Sycamore Street",
-            "addressLocality": "Cincinnati",
-            "addressRegion": "OH",
-            "postalCode": "45202",
-            "addressCountry": "US"
-          },
-          "telephone": "+1-915-203-6067",
-          "email": "attyjamesmaus@aol.com"
-        },
-        "alumniOf": [
-          {"@type": "EducationalOrganization","name": "William Mitchell College of Law","location": "St. Paul, MN"},
-          {"@type": "EducationalOrganization","name": "Winona State University","location": "Minnesota"},
-          {"@type": "EducationalOrganization","name": "Fisher Catholic High School","location": "Lancaster, Ohio"}
-        ],
-        "memberOf": [
-          {"@type": "Organization","name": "Ohio State Bar"},
-          {"@type": "Organization","name": "Texas State Bar"},
-          {"@type": "Organization","name": "U.S. District Court for the Southern District of Ohio"}
-        ],
-        "hasOccupation": {
-          "@type": "Occupation",
-          "name": "Attorney",
-          "occupationLocation": {"@type": "City","name": "Cincinnati, OH"},
-          "skills": ["Criminal Defense","Family Law","Personal Injury","Medical Malpractice","Employment Law","Civil Rights"]
-        },
-        "award": [
-          "Multi-million-dollar verdicts",
-          "Not guilty verdicts in state, federal, and military courts",
-          "Six-figure civil rights settlement against Cincinnati Police"
-        ],
-        "knowsAbout": [
-          "Court-martial defense",
-          "Federal criminal defense", 
-          "Appellate advocacy",
-          "Military justice",
-          "Life sentence appeals",
-          "Civil rights litigation"
-        ],
-        "colleague": [
-          {"@type": "Person","name": "Tamara Pavlik","jobTitle": "Nurse Practitioner","description": "Medical expert for malpractice and personal injury cases"},
-          {"@type": "Person","name": "Lydia Czanik","jobTitle": "Human Resources Specialist","description": "Employment law and HR expertise"}
-        ],
-        "sameAs": ["https://jamesmauslaw.com"]
-      }
-    ]
-  }
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "James Maus",
+  "jobTitle": "Attorney at Law",
+  "url": "https://jamesmauslaw.com/about/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jamesmauslaw.com/about/"
+  },
+  "image": "https://jamesmauslaw.com/images/headshot.jpg",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "James Maus Law",
+    "url": "https://jamesmauslaw.com"
+  },
+  "sameAs": ["https://jamesmauslaw.com"]
+}
   </script>
 
   <style>
